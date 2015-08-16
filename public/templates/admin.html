@@ -1,0 +1,16 @@
+<h2>Add a product</h2>
+<a href="/#/add">Add New</a>
+<h2>Update/Delete a product</h2>
+<products ng-repeat="product in products">
+  {{product.title}}
+  {{product.description}}
+  {{product.price | currency}}
+  <button>
+    <a href="/#/edit/{{product._id}}">Update
+    </a>
+  </button>
+  <button ng-click="deleteProduct(product)">Delete</button>
+</products>
+<div>
+  {{products._id}}
+</div>

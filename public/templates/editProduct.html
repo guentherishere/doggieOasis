@@ -1,0 +1,10 @@
+<h1>Edit products</h1>
+<form ng-submit="updateProduct(product)">
+  <input ng-model="product.title" type="text" value="Product Title"></input>
+  <br>
+  <input ng-model="product.description" placeholder="Add description" type="text"></input>
+  <br>
+  <input ng-model="product.price" placeholder="Add dollar amount" type="text"></input>
+  <br>
+  <button class="btn btn-default" ng-submit="addNewProduct()" type="submit">Submit</button>
+</form>

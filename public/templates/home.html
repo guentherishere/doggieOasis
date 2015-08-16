@@ -1,0 +1,11 @@
+<div class="product-container" ng-repeat="product in products">
+  <div class="item-title">
+    {{product.title}}
+  </div>
+  <hr>
+  <div class="item-desc">{{product.description}}
+  </div>
+  <br>
+  <div class="currency">{{product.price | currency}}
+  </div>
+</div>
