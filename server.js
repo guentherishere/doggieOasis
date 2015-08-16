@@ -6,6 +6,8 @@ var mongoose = require('mongoose');
 
 //Controllers
 var ProductCtrl = require('./controllers/ProductCtrl');
+var UserCtrl = require('./controllers/UserCtrl');
+var OrderCtrl = require('./controllers/OrderCtrl');
 
 //Express
 var app = express();
