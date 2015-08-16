@@ -18,20 +18,20 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 //Endpoints
-app.post('/product', ProductCtrl.create);
-app.get('/product', ProductCtrl.read);
-app.put('/product/:id', ProductCtrl.update);
-app.delete('/product/:id', ProductCtrl.delete);
+app.post('/api/product', ProductCtrl.create);
+app.get('/api/product', ProductCtrl.read);
+app.put('/api/product/:id', ProductCtrl.update);
+app.delete('/api/product/:id', ProductCtrl.delete);
 
-app.post('/users', UserCtrl.create);
-app.get('/users', UserCtrl.read);
-app.put('/users/:id', UserCtrl.update);
-app.delete('/users/:id', UserCtrl.delete);
+app.post('/api/users', UserCtrl.create);
+app.get('/api/users', UserCtrl.read);
+app.put('/api/users/:id', UserCtrl.update);
+app.delete('/api/users/:id', UserCtrl.delete);
 
-app.post('/orders', OrderCtrl.create);
-app.get('/orders', OrderCtrl.read);
-app.put('/orders/:id', OrderCtrl.update);
-app.delete('/orders/:id', OrderCtrl.delete);
+app.post('/api/orders', OrderCtrl.create);
+app.get('/api/orders', OrderCtrl.read);
+app.put('/api/orders/:id', OrderCtrl.update);
+app.delete('/api/orders/:id', OrderCtrl.delete);
 
 //API connection
 var port = 1337;

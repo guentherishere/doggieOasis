@@ -18,5 +18,4 @@ var productSchema = new mongoose.Schema({
     }
 });
 
-//'Product' below is where you name the collection; the name gets lowercased and pluralized 
 module.exports = mongoose.model('Product', productSchema);
