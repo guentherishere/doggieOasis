@@ -24,6 +24,22 @@ app.config(function ($routeProvider) {
     controller: "editCtrl"
   })
 
+  .when('/contact', {
+    templateUrl: "templates/contact.html",
+  })
+
+  .when('/retail', {
+    templateUrl: "templates/retail.html",
+  })
+
+  .when('/spa', {
+    templateUrl: "templates/spa.html",
+  })
+
+  .when('/daycare', {
+    templateUrl: "templates/daycare.html",
+  })
+
   .otherwise({
     redirectTo: '/'
   });
