@@ -29,12 +29,14 @@ app.config(function ($routeProvider) {
     controller: "contactCtrl"
   })
 
-  .when('/retail', {
-    templateUrl: "templates/retail.html",
+  .when('/store', {
+    templateUrl: "templates/store.html",
+    controller: "productCtrl"
   })
 
   .when('/spa', {
     templateUrl: "templates/spa.html",
+    controller: "spaCtrl"
   })
 
   .when('/daycare', {

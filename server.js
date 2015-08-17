@@ -12,6 +12,7 @@ var OrderCtrl = require('./controllers/OrderCtrl');
 var AddressCtrl = require('./controllers/AddressCtrl');
 var DaycareCtrl = require('./controllers/DaycareCtrl');
 var GroomingCtrl = require('./controllers/GroomingCtrl');
+var SpaCtrl = require('./controllers/spaCtrl');
 
 //Express
 var app = express();
@@ -46,6 +47,11 @@ app.post('/api/product', ProductCtrl.create);
 app.get('/api/product', ProductCtrl.read);
 app.put('/api/product/:id', ProductCtrl.update);
 app.delete('/api/product/:id', ProductCtrl.delete);
+
+app.post('/api/spa', SpaCtrl.create);
+app.get('/api/spa', SpaCtrl.read);
+app.put('/api/spa/:id', SpaCtrl.update);
+app.delete('/api/spa/:id', SpaCtrl.delete);
 
 app.post('/api/users', UserCtrl.create);
 app.get('/api/users', UserCtrl.read);
