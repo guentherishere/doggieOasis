@@ -1,0 +1,15 @@
+<h2>Daycare Rates</h2>
+<div ng-repeat="daycare in daycareRates">
+  Days: {{daycare.days}}
+  <br>
+  Full Day One Dog: {{daycare.fullOneDog | currency}}
+  <br>
+  Full Day Two Dogs: {{daycare.fullTwoDogs | currency}}
+  <br>
+  Half Day One Dog: {{daycare.halfOneDog | currency}}
+  <br>
+  Half day Two Dogs: {{daycare.halfTwoDogs | currency}}
+  <br>
+  Each Additional Dog: {{daycare.additional | currency}}
+  <p>
+</div>

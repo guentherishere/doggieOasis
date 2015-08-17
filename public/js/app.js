@@ -39,8 +39,9 @@ app.config(function ($routeProvider) {
     controller: "spaCtrl"
   })
 
-  .when('/daycare', {
-    templateUrl: "templates/daycare.html",
+  .when('/daycareRates', {
+    templateUrl: "templates/daycareRates.html",
+    controller: "daycareRatesCtrl"
   })
 
   .otherwise({
