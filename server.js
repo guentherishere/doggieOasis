@@ -9,6 +9,7 @@ var WelcomeCtrl = require('./controllers/WelcomeCtrl');
 var ProductCtrl = require('./controllers/ProductCtrl');
 var UserCtrl = require('./controllers/UserCtrl');
 var OrderCtrl = require('./controllers/OrderCtrl');
+var AddressCtrl = require('./controllers/AddressCtrl');
 
 //Express
 var app = express();
@@ -23,6 +24,11 @@ app.post('/api/welcome', WelcomeCtrl.create);
 app.get('/api/welcome', WelcomeCtrl.read);
 app.put('/api/welcome/:id', WelcomeCtrl.update);
 app.delete('/api/welcome/:id', WelcomeCtrl.delete);
+
+app.post('/api/address', AddressCtrl.create);
+app.get('/api/address', AddressCtrl.read);
+app.put('/api/address/:id', AddressCtrl.update);
+app.delete('/api/address/:id', AddressCtrl.delete);
 
 app.post('/api/product', ProductCtrl.create);
 app.get('/api/product', ProductCtrl.read);
