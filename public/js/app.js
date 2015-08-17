@@ -6,7 +6,7 @@ app.config(function ($routeProvider) {
 
     .when('/', {
     templateUrl: "templates/home.html",
-    controller: "homeCtrl"
+    controller: "welcomeCtrl"
   })
 
   .when('/admin', {
