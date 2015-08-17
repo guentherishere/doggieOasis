@@ -10,6 +10,8 @@ var ProductCtrl = require('./controllers/ProductCtrl');
 var UserCtrl = require('./controllers/UserCtrl');
 var OrderCtrl = require('./controllers/OrderCtrl');
 var AddressCtrl = require('./controllers/AddressCtrl');
+var DaycareCtrl = require('./controllers/DaycareCtrl');
+var GroomingCtrl = require('./controllers/GroomingCtrl');
 
 //Express
 var app = express();
@@ -29,6 +31,16 @@ app.post('/api/address', AddressCtrl.create);
 app.get('/api/address', AddressCtrl.read);
 app.put('/api/address/:id', AddressCtrl.update);
 app.delete('/api/address/:id', AddressCtrl.delete);
+
+app.post('/api/daycare', DaycareCtrl.create);
+app.get('/api/daycare', DaycareCtrl.read);
+app.put('/api/daycare/:id', DaycareCtrl.update);
+app.delete('/api/daycare/:id', DaycareCtrl.delete);
+
+app.post('/api/grooming', GroomingCtrl.create);
+app.get('/api/grooming', GroomingCtrl.read);
+app.put('/api/grooming/:id', GroomingCtrl.update);
+app.delete('/api/grooming/:id', GroomingCtrl.delete);
 
 app.post('/api/product', ProductCtrl.create);
 app.get('/api/product', ProductCtrl.read);

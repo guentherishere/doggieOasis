@@ -1,4 +1,4 @@
-app.controller('contactCtrl', function ($scope, addressData) {
+app.controller('contactCtrl', function ($scope, addressData, daycareData, groomingData) {
 
   var getAddress = function () {
     addressData.getAddressData().then(function (response) {
