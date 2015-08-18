@@ -11,30 +11,30 @@ app.service('groomingData', function ($http, $q) {
     return deferred.promise;
   };
 
-  this.addGroomingData = function (grooming) {
-    var deferred = $q.defer();
-    $http({
-      method: 'POST',
-      url: 'http://localhost:1337/api/grooming',
-      data: {
-        groomingText: grooming.groomingText
-      }
-    }).then(function (response) {
-      deferred.resolve(response);
-    });
-    return deferred.promise;
-  };
+  // this.addGroomingData = function (grooming) {
+  //   var deferred = $q.defer();
+  //   $http({
+  //     method: 'POST',
+  //     url: 'http://localhost:1337/api/grooming',
+  //     data: {
+  //       groomingText: grooming.groomingText
+  //     }
+  //   }).then(function (response) {
+  //     deferred.resolve(response);
+  //   });
+  //   return deferred.promise;
+  // };
 
-  this.deleteGroomingData = function (grooming) {
-    var deferred = $q.defer();
-    $http({
-      method: 'DELETE',
-      url: 'http://localhost:1337/api/grooming/' + grooming._id
-    }).then(function (response) {
-      deferred.resolve(response);
-    });
-    return deferred.promise;
-  };
+  // this.deleteGroomingData = function (grooming) {
+  //   var deferred = $q.defer();
+  //   $http({
+  //     method: 'DELETE',
+  //     url: 'http://localhost:1337/api/grooming/' + grooming._id
+  //   }).then(function (response) {
+  //     deferred.resolve(response);
+  //   });
+  //   return deferred.promise;
+  // };
 
   this.updateGroomingData = function (grooming) {
     var deferred = $q.defer();

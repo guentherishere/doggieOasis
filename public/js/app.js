@@ -29,6 +29,11 @@ app.config(function ($routeProvider) {
     controller: "editWelcomeCtrl"
   })
 
+  .when('/editDaycareHours/:id', {
+    templateUrl: "templates/editDaycareHours.html",
+    controller: "editDaycareHoursCtrl"
+  })
+
   .when('/contact', {
     templateUrl: "templates/contact.html",
     controller: "contactCtrl"
