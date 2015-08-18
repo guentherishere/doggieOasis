@@ -34,6 +34,11 @@ app.config(function ($routeProvider) {
     controller: "contactCtrl"
   })
 
+  .when('/editAddress/:id', {
+    templateUrl: "templates/editAddress.html",
+    controller: "editAddressCtrl"
+  })
+
   .when('/store', {
     templateUrl: "templates/store.html",
     controller: "productCtrl"

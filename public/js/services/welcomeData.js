@@ -11,30 +11,30 @@ app.service('welcomeData', function ($http, $q) {
     return deferred.promise;
   };
 
-  this.addWelcomeData = function (welcome) {
-    var deferred = $q.defer();
-    $http({
-      method: 'POST',
-      url: 'http://localhost:1337/api/welcome',
-      data: {
-        welcomeText: welcome.welcomeText
-      }
-    }).then(function (response) {
-      deferred.resolve(response);
-    });
-    return deferred.promise;
-  };
+  // this.addWelcomeData = function (welcome) {
+  //   var deferred = $q.defer();
+  //   $http({
+  //     method: 'POST',
+  //     url: 'http://localhost:1337/api/welcome',
+  //     data: {
+  //       welcomeText: welcome.welcomeText
+  //     }
+  //   }).then(function (response) {
+  //     deferred.resolve(response);
+  //   });
+  //   return deferred.promise;
+  // };
 
-  this.deleteWelcomeData = function (welcome) {
-    var deferred = $q.defer();
-    $http({
-      method: 'DELETE',
-      url: 'http://localhost:1337/api/welcome/' + welcome._id
-    }).then(function (response) {
-      deferred.resolve(response);
-    });
-    return deferred.promise;
-  };
+  // this.deleteWelcomeData = function (welcome) {
+  //   var deferred = $q.defer();
+  //   $http({
+  //     method: 'DELETE',
+  //     url: 'http://localhost:1337/api/welcome/' + welcome._id
+  //   }).then(function (response) {
+  //     deferred.resolve(response);
+  //   });
+  //   return deferred.promise;
+  // };
 
   this.updateWelcomeData = function (welcome) {
     var deferred = $q.defer();

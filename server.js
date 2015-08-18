@@ -24,15 +24,15 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 //Endpoints
-app.post('/api/welcome', WelcomeCtrl.create);
+// app.post('/api/welcome', WelcomeCtrl.create);
 app.get('/api/welcome', WelcomeCtrl.read);
 app.put('/api/welcome/:id', WelcomeCtrl.update);
-app.delete('/api/welcome/:id', WelcomeCtrl.delete);
+// app.delete('/api/welcome/:id', WelcomeCtrl.delete);
 
-app.post('/api/address', AddressCtrl.create);
+// app.post('/api/address', AddressCtrl.create);
 app.get('/api/address', AddressCtrl.read);
 app.put('/api/address/:id', AddressCtrl.update);
-app.delete('/api/address/:id', AddressCtrl.delete);
+// app.delete('/api/address/:id', AddressCtrl.delete);
 
 app.post('/api/daycare', DaycareCtrl.create);
 app.get('/api/daycare', DaycareCtrl.read);
