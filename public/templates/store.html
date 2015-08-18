@@ -1,9 +1,21 @@
 <h2>Current Products</h2>
+<!-- Admin View -->
+<a href="/#/addProduct">Add New Product</a>
+<!-- End Admin View -->
 <products ng-repeat="product in products">
+  <p></p>
   {{product.title}}
   <br>
   {{product.description}}
   <br>
   {{product.price | currency}}
-  <p>
+    <!-- Admin View -->
+    <br>
+    <button>
+      <a href="/#/editProduct/{{product._id}}">Update
+      </a>
+    </button>
+    <button ng-click="deleteProduct(product)">Delete</button>
+    <p></p>
+    <!-- End Admin View -->
 </products>

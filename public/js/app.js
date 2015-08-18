@@ -14,14 +14,19 @@ app.config(function ($routeProvider) {
     controller: "adminCtrl"
   })
 
-  .when('/add', {
+  .when('/addProduct', {
     templateUrl: "templates/addProduct.html",
     controller: "adminCtrl"
   })
 
-  .when('/edit/:id', {
+  .when('/editProduct/:id', {
     templateUrl: "templates/editProduct.html",
-    controller: "editCtrl"
+    controller: "editProductCtrl"
+  })
+
+  .when('/editWelcome/:id', {
+    templateUrl: "templates/editWelcome.html",
+    controller: "editWelcomeCtrl"
   })
 
   .when('/contact', {

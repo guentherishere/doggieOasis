@@ -6,7 +6,8 @@
 <!-- Contact -> Grooming Hours -->
 
 <!-- Store -> Current Products -->
-<a href="/#/add">Add New Product</a>
+
+
 <p>
   <h3>Current Products</h3>
 </p>
@@ -17,16 +18,14 @@
   <br>
   {{product.price | currency}}
   <br>
+  <a href="/#/addProduct">Add New Product</a>
   <button>
-    <a href="/#/edit/{{product._id}}">Update
+    <a href="/#/editProduct/{{product._id}}">Update
     </a>
   </button>
   <button ng-click="deleteProduct(product)">Delete</button>
-  <p>
-</products>
-<div>
-  {{products._id}}
-</div>
+  <p></p>
+  </products>
 
 <!-- Spa Packages -> Spa Packages -->
 <!-- Doggie Daycare -> Daycare Rates -->

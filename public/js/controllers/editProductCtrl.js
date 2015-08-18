@@ -1,4 +1,4 @@
-app.controller('editCtrl', function ($scope, productData, $routeParams) {
+app.controller('editProductCtrl', function ($scope, productData, $routeParams) {
 
   var getProducts = function () {
     productData.getProductData().then(function (response) {
