@@ -1,0 +1,16 @@
+<h1>Edit Daycare Packages</h1>
+<form ng-submit="updateDaycarePackages(daycarePackages)">
+  Days: <input ng-model="daycarePackages.days" type="text" value="Add Number of Days"></input>
+  <br>
+  Full Day One Dog: <input ng-model="daycarePackages.fullOneDog" placeholder="Add Rate" type="text"></input>
+  <br>
+  Full Day Two Dogs: <input ng-model="daycarePackages.fullTwoDogs" placeholder="Add Rate" type="text"></input>
+  <br>
+  Half Day One Dog:<input ng-model="daycarePackages.halfOneDog" placeholder="Add Rate" type="text"></input>
+  <br>
+  Half Day Two Dogs: <input ng-model="daycarePackages.halfTwoDogs" placeholder="Add Rate" type="text"></input>
+  <br>
+  Each Additional Dog: <input ng-model="daycarePackages.additional" placeholder="Add Rate" type="text"></input>
+  <br>
+  <button type="submit">Submit</button>
+</form>

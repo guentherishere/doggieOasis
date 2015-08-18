@@ -9,16 +9,6 @@ app.config(function ($routeProvider) {
     controller: "welcomeCtrl"
   })
 
-  .when('/admin', {
-    templateUrl: "templates/admin.html",
-    controller: "adminCtrl"
-  })
-
-  .when('/addProduct', {
-    templateUrl: "templates/addProduct.html",
-    controller: "adminCtrl"
-  })
-
   .when('/contact', {
     templateUrl: "templates/contact.html",
     controller: "contactCtrl"
@@ -27,6 +17,11 @@ app.config(function ($routeProvider) {
   .when('/editAddress/:id', {
     templateUrl: "templates/editAddress.html",
     controller: "editAddressCtrl"
+  })
+
+  .when('/editSpa/:id', {
+    templateUrl: "templates/editSpa.html",
+    controller: "editSpaCtrl"
   })
 
   .when('/store', {
@@ -59,9 +54,29 @@ app.config(function ($routeProvider) {
     controller: "editDaycareHoursCtrl"
   })
 
+  .when('/editDaycarePackages/:id', {
+    templateUrl: "templates/editDaycarePackages.html",
+    controller: "editDaycarePackagesCtrl"
+  })
+
   .when('/editGroomingHours/:id', {
     templateUrl: "templates/editGroomingHours.html",
     controller: "editGroomingHoursCtrl"
+  })
+
+  .when('/addProduct', {
+    templateUrl: "templates/addProduct.html",
+    controller: "productCtrl"
+  })
+
+  .when('/addSpa', {
+    templateUrl: "templates/addSpa.html",
+    controller: "spaCtrl"
+  })
+
+  .when('/addDaycarePackage', {
+    templateUrl: "templates/addDaycarePackages.html",
+    controller: "daycareRatesCtrl"
   })
 
   .otherwise({

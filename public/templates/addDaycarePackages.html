@@ -1,0 +1,16 @@
+<h1>Add New Daycare Package</h1>
+<form name="daycareForm" ng-submit="addNewDaycareRates(daycareForm.$valid)" novalidate>
+  <input ng-model="daycareRates.days" placeholder="Add Amount of Days" required type="text"></input>
+  <br>
+  <input ng-model="daycareRates.fullOneDog" placeholder="Add Rate" required type="text"></input>
+  <br>
+  <input ng-model="daycareRates.fullTwoDogs" placeholder="Add Rate (must be number)" required type="text"></input>
+  <br>
+  <input ng-model="daycareRates.halfOneDog" placeholder="Add Rate (must be number)" required type="text"></input>
+  <br>
+  <input ng-model="daycareRates.halfTwoDogs" placeholder="Add Rate (must be number)" required type="text"></input>
+  <br>
+  <input ng-model="daycareRates.additional" placeholder="Add Rate (must be number)" required type="text"></input>
+  <br>
+  <button ng-disabled="daycareForm.$invalid" ng-submit="addNewDaycareRates()" type="submit">Submit</button>
+</form>

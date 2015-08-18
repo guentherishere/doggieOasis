@@ -17,7 +17,12 @@ app.service('daycareRatesData', function ($http, $q) {
       method: 'POST',
       url: 'http://localhost:1337/api/daycareRates',
       data: {
-        daycareRatesText: daycare.daycareText
+        days: daycareRates.days,
+        fullOneDog: daycareRates.fullOneDog,
+        fullTwoDogs: daycareRates.fullTwoDogs,
+        halfOneDog: daycareRates.halfOneDog,
+        halfTwoDogs: daycareRates.halfTwoDogs,
+        additional: daycareRates.additional
       }
     }).then(function (response) {
       deferred.resolve(response);
@@ -42,12 +47,16 @@ app.service('daycareRatesData', function ($http, $q) {
       method: 'PUT',
       url: 'http://localhost:1337/api/daycareRates/' + daycareRates._id,
       data: {
-        daycareRatesText: daycare.daycareRatesText
+        days: daycareRates.days,
+        fullOneDog: daycareRates.fullOneDog,
+        fullTwoDogs: daycareRates.fullTwoDogs,
+        halfOneDog: daycareRates.halfOneDog,
+        halfTwoDogs: daycareRates.halfTwoDogs,
+        additional: daycareRates.additional
       }
     }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
-
 });

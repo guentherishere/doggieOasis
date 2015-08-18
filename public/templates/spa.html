@@ -1,8 +1,21 @@
 <h2>Spa Packages</h2>
+<!-- Admin View -->
+<a href="/#/addSpa">Add New Spa Package</a>
+<!-- End Admin View -->
+<p></p>
 <div ng-repeat="spa in spas">
   {{spa.title}}
   <br>
   {{spa.description}}
   <br>
-  {{spa.price | currency}}
-  <p></div>
+  Price: ${{spa.price}}
+<!-- Admin View -->
+  <br>
+  <button>
+    <a href="/#/editSpa/{{spa._id}}">Update
+    </a>
+  </button>
+  <button ng-click="deleteSpa(spa)">Delete</button>
+  <p></p>
+<!-- End Admin View -->
+</div>

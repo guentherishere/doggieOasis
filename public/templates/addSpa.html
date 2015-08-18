@@ -1,0 +1,10 @@
+<h1>Add New Spa Package</h1>
+<form name="spaForm" ng-submit="addNewSpa(spaForm.$valid)" novalidate>
+  <input ng-model="spa.title" placeholder="Add Package Name" required type="text"></input>
+  <br>
+  <input ng-model="spa.description" placeholder="Add Description" required type="text"></input>
+  <br>
+  <input ng-model="spa.price" placeholder="Add Amount (must be number)" required type="text"></input>
+  <br>
+  <button ng-disabled="spaForm.$invalid" ng-submit="addNewSpa()" type="submit">Submit</button>
+</form>
