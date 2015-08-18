@@ -19,21 +19,6 @@ app.config(function ($routeProvider) {
     controller: "adminCtrl"
   })
 
-  .when('/editProduct/:id', {
-    templateUrl: "templates/editProduct.html",
-    controller: "editProductCtrl"
-  })
-
-  .when('/editWelcome/:id', {
-    templateUrl: "templates/editWelcome.html",
-    controller: "editWelcomeCtrl"
-  })
-
-  .when('/editDaycareHours/:id', {
-    templateUrl: "templates/editDaycareHours.html",
-    controller: "editDaycareHoursCtrl"
-  })
-
   .when('/contact', {
     templateUrl: "templates/contact.html",
     controller: "contactCtrl"
@@ -57,6 +42,26 @@ app.config(function ($routeProvider) {
   .when('/daycareRates', {
     templateUrl: "templates/daycareRates.html",
     controller: "daycareRatesCtrl"
+  })
+
+  .when('/editProduct/:id', {
+    templateUrl: "templates/editProduct.html",
+    controller: "editProductCtrl"
+  })
+
+  .when('/editWelcome/:id', {
+    templateUrl: "templates/editWelcome.html",
+    controller: "editWelcomeCtrl"
+  })
+
+  .when('/editDaycareHours/:id', {
+    templateUrl: "templates/editDaycareHours.html",
+    controller: "editDaycareHoursCtrl"
+  })
+
+  .when('/editGroomingHours/:id', {
+    templateUrl: "templates/editGroomingHours.html",
+    controller: "editGroomingHoursCtrl"
   })
 
   .otherwise({

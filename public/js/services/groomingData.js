@@ -42,7 +42,13 @@ app.service('groomingData', function ($http, $q) {
       method: 'PUT',
       url: 'http://localhost:1337/api/grooming/' + grooming._id,
       data: {
-        groomingText: grooming.groomingText
+        monday: grooming.monday,
+        tuesday: grooming.tuesday,
+        wednesday: grooming.wednesday,
+        thursday: grooming.thursday,
+        friday: grooming.friday,
+        saturday: grooming.saturday,
+        sunday: grooming.sunday
       }
     }).then(function (response) {
       deferred.resolve(response);
