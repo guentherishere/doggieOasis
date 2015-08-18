@@ -1,17 +1,17 @@
-app.service('daycareData', function($http, $q) {
+app.service('daycareData', function ($http, $q) {
 
-  this.getDaycareData = function() {
+  this.getDaycareData = function () {
     var deferred = $q.defer();
     $http({
       method: 'GET',
       url: 'http://localhost:1337/api/daycare',
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response.data);
     });
     return deferred.promise;
   };
 
-  this.addDaycareData = function(daycare) {
+  this.addDaycareData = function (daycare) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
@@ -19,24 +19,24 @@ app.service('daycareData', function($http, $q) {
       data: {
         daycareText: daycare.daycareText
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.deleteDaycareData = function(daycare) {
+  this.deleteDaycareData = function (daycare) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
       url: 'http://localhost:1337/api/daycare/' + daycare._id
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.updateDaycareData = function(daycare) {
+  this.updateDaycareData = function (daycare) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
@@ -44,7 +44,7 @@ app.service('daycareData', function($http, $q) {
       data: {
         daycareText: daycare.daycareText
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;

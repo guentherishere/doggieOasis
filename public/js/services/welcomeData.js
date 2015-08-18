@@ -1,17 +1,17 @@
-app.service('welcomeData', function($http, $q) {
+app.service('welcomeData', function ($http, $q) {
 
-  this.getWelcomeData = function() {
+  this.getWelcomeData = function () {
     var deferred = $q.defer();
     $http({
       method: 'GET',
       url: 'http://localhost:1337/api/welcome',
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response.data);
     });
     return deferred.promise;
   };
 
-  this.addWelcomeData = function(welcome) {
+  this.addWelcomeData = function (welcome) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
@@ -19,24 +19,24 @@ app.service('welcomeData', function($http, $q) {
       data: {
         welcomeText: welcome.welcomeText
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.deleteWelcomeData = function(welcome) {
+  this.deleteWelcomeData = function (welcome) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
       url: 'http://localhost:1337/api/welcome/' + welcome._id
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.updateWelcomeData = function(welcome) {
+  this.updateWelcomeData = function (welcome) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
@@ -44,7 +44,7 @@ app.service('welcomeData', function($http, $q) {
       data: {
         welcomeText: welcome.welcomeText
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;

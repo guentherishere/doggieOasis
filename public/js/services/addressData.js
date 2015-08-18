@@ -1,17 +1,17 @@
-app.service('addressData', function($http, $q) {
+app.service('addressData', function ($http, $q) {
 
-  this.getAddressData = function() {
+  this.getAddressData = function () {
     var deferred = $q.defer();
     $http({
       method: 'GET',
       url: 'http://localhost:1337/api/address',
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response.data);
     });
     return deferred.promise;
   };
 
-  this.addAddressData = function(address) {
+  this.addAddressData = function (address) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
@@ -19,24 +19,24 @@ app.service('addressData', function($http, $q) {
       data: {
         addressText: address.addressText
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.deleteAddressData = function(address) {
+  this.deleteAddressData = function (address) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
       url: 'http://localhost:1337/api/address/' + address._id
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.updateAddressData = function(address) {
+  this.updateAddressData = function (address) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
@@ -44,7 +44,7 @@ app.service('addressData', function($http, $q) {
       data: {
         addressText: address.addressText
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;

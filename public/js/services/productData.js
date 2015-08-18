@@ -1,17 +1,17 @@
-app.service('productData', function($http, $q) {
+app.service('productData', function ($http, $q) {
 
-  this.getProductData = function() {
+  this.getProductData = function () {
     var deferred = $q.defer();
     $http({
       method: 'GET',
       url: 'http://localhost:1337/api/product',
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response.data);
     });
     return deferred.promise;
   };
 
-  this.addProductData = function(product) {
+  this.addProductData = function (product) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
@@ -21,24 +21,24 @@ app.service('productData', function($http, $q) {
         description: product.description,
         price: product.price
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.deleteProductData = function(product) {
+  this.deleteProductData = function (product) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
       url: 'http://localhost:1337/api/product/' + product._id
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
   };
 
-  this.updateProductData = function(product) {
+  this.updateProductData = function (product) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
@@ -48,7 +48,7 @@ app.service('productData', function($http, $q) {
         description: product.description,
         price: product.price
       }
-    }).then(function(response) {
+    }).then(function (response) {
       deferred.resolve(response);
     });
     return deferred.promise;
