@@ -11,11 +11,10 @@
   {{product.price | currency}}
 <!-- Admin View -->
   <br>
-  <button>
-    <a ng-href="/#/editProduct/{{product._id}}">Update
-    </a>
-  </button>
-  <button ng-click="deleteProduct(product)">Delete</button>
+  <p></p>
+  <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update
+  </a>
+  <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)">Delete</button>
   <p></p>
 <!-- End Admin View -->
 </products>
