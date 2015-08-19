@@ -1,6 +1,6 @@
 <h2>Daycare Rates</h2>
 <!-- Admin View -->
-<a href="/#/addDaycarePackage">Add New Daycare Package</a>
+<a ng-href="/#/addDaycarePackage">Add New Daycare Package</a>
 <p></p>
 <!-- End Admin View -->
 <div ng-repeat="daycare in daycareRates">
@@ -24,7 +24,7 @@
 <!-- Admin View -->
   <br>
   <button>
-    <a href="/#/editDaycarePackages/{{daycare._id}}">Update
+    <a ng-href="/#/editDaycarePackages/{{daycare._id}}">Update
     </a>
   </button>
   <button ng-click="deleteDaycareRates(daycare)">Delete</button>
