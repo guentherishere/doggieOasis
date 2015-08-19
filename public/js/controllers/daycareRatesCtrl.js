@@ -1,10 +1,22 @@
-app.controller('daycareRatesCtrl', function ($scope, daycareRatesData) {
+app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routeParams) {
   var getDaycareRates = function () {
     daycareRatesData.getDaycareRatesData().then(function (response) {
       $scope.daycareRates = response;
     });
   };
   getDaycareRates();
+
+  var getDaycarePackagesEdit = function () {
+    daycareRatesData.getDaycareRatesData().then(function (response) {
+      for (var i = 0; i < response.length; i++) {
+        if ($routeParams.id === response[i]._id) {
+          $scope.daycarePackages = response[i];
+          console.log($scope.daycare);
+        }
+      }
+    });
+  };
+  getDaycarePackagesEdit();
 
   $scope.addNewDaycareRates = function (isValid) {
     if (isValid) {

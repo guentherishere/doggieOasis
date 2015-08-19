@@ -3,7 +3,7 @@
 <a href="/#/addSpa">Add New Spa Package</a>
 <!-- End Admin View -->
 <p></p>
-<div ng-repeat="spa in spas">
+<spa ng-repeat="spa in spas">
   {{spa.title}}
   <br>
   {{spa.description}}
@@ -18,4 +18,4 @@
   <button ng-click="deleteSpa(spa)">Delete</button>
   <p></p>
 <!-- End Admin View -->
-</div>
+</spa>

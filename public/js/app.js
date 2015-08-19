@@ -16,12 +16,12 @@ app.config(function ($routeProvider) {
 
   .when('/editAddress/:id', {
     templateUrl: "templates/editAddress.html",
-    controller: "editAddressCtrl"
+    controller: "contactCtrl"
   })
 
   .when('/editSpa/:id', {
     templateUrl: "templates/editSpa.html",
-    controller: "editSpaCtrl"
+    controller: "spaCtrl"
   })
 
   .when('/store', {
@@ -41,27 +41,27 @@ app.config(function ($routeProvider) {
 
   .when('/editProduct/:id', {
     templateUrl: "templates/editProduct.html",
-    controller: "editProductCtrl"
+    controller: "productCtrl"
   })
 
   .when('/editWelcome/:id', {
     templateUrl: "templates/editWelcome.html",
-    controller: "editWelcomeCtrl"
+    controller: "welcomeCtrl"
   })
 
   .when('/editDaycareHours/:id', {
     templateUrl: "templates/editDaycareHours.html",
-    controller: "editDaycareHoursCtrl"
+    controller: "contactCtrl"
   })
 
   .when('/editDaycarePackages/:id', {
     templateUrl: "templates/editDaycarePackages.html",
-    controller: "editDaycarePackagesCtrl"
+    controller: "daycareRatesCtrl"
   })
 
   .when('/editGroomingHours/:id', {
     templateUrl: "templates/editGroomingHours.html",
-    controller: "editGroomingHoursCtrl"
+    controller: "contactCtrl"
   })
 
   .when('/addProduct', {

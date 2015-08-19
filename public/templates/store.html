@@ -9,13 +9,13 @@
   {{product.description}}
   <br>
   {{product.price | currency}}
-    <!-- Admin View -->
-    <br>
-    <button>
-      <a href="/#/editProduct/{{product._id}}">Update
-      </a>
-    </button>
-    <button ng-click="deleteProduct(product)">Delete</button>
-    <p></p>
-    <!-- End Admin View -->
+<!-- Admin View -->
+  <br>
+  <button>
+    <a href="/#/editProduct/{{product._id}}">Update
+    </a>
+  </button>
+  <button ng-click="deleteProduct(product)">Delete</button>
+  <p></p>
+<!-- End Admin View -->
 </products>

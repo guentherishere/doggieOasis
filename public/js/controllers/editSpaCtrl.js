@@ -1,6 +1,6 @@
 app.controller('editSpaCtrl', function ($scope, spaData, $routeParams) {
 
-  var getSpa = function () {
+  var getSpaEdit = function () {
     spaData.getSpaData().then(function (response) {
       for (var i = 0; i < response.length; i++) {
         if ($routeParams.id === response[i]._id) {
@@ -10,7 +10,7 @@ app.controller('editSpaCtrl', function ($scope, spaData, $routeParams) {
       }
     });
   };
-  getSpa();
+  getSpaEdit();
 
   $scope.updateSpa = function (spa) {
     spaData.updateSpaData(spa).then(function (response) {

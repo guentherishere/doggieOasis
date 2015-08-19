@@ -24,7 +24,7 @@ app.service('addressData', function ($http, $q) {
   //   });
   //   return deferred.promise;
   // };
-  // 
+  //
   // this.deleteAddressData = function (address) {
   //   var deferred = $q.defer();
   //   $http({
