@@ -1,4 +1,4 @@
-var app = angular.module('doggieOasis', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('doggieOasis', ['ngRoute']);
 
 app.config(function ($routeProvider) {
 

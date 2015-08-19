@@ -1,94 +1,115 @@
-<h2>
-  Contact Info
-</h2>
-<addresses ng-repeat="address in addressText">
-  {{address.address}}
-  <br>
-  {{address.city}}
-  <br>
-  {{address.state}}
-  <br>
-  {{address.zip}}
-  <br>
-  {{address.phone}}
-  <br>
-  {{address.email}}
+<div class="section">
+
+<!--   Icon Section   -->
+  <div class="row">
+    <div class="col s18 m4">
+      <div class="icon-block">
+        <h4 class="center">Address</h4>
+
+        <center>
+          <addresses ng-repeat="address in addressText">
+            {{address.address}}
+            <br>
+            {{address.city}}
+            <br>
+            {{address.state}}
+            <br>
+            {{address.zip}}
+            <br>
+            {{address.phone}}
+            <br>
+            {{address.email}}
 <!-- Admin View -->
-  <br>
-  <button>
-    <a ng-href="/#/editAddress/{{address._id}}">Update
-    </a>
-  </button>
-  <p></p>
+            <br>
+            <p></p>
+            <button>
+              <a ng-href="/#/editAddress/{{address._id}}">Update
+              </a>
+            </button>
+            <p></p>
 <!-- End Admin View -->
-</addresses>
-<p>
-  <h2>
-    Daycare Hours
-  </h2>
-  <daycareHours ng-repeat="hours in daycareHours">
-    Monday:
-    {{hours.monday}}
-    <br>
-    Tuesday:
-    {{hours.tuesday}}
-    <br>
-    Wednesday:
-    {{hours.wednesday}}
-    <br>
-    Thursday:
-    {{hours.thursday}}
-    <br>
-    Friday:
-    {{hours.friday}}
-    <br>
-    Saturday:
-    {{hours.saturday}}
-    <br>
-    Sunday:
-    {{hours.sunday}}
+          </addresses>
+        </center>
+
+      </div>
+    </div>
+    <div class="col s18 m4">
+      <div class="icon-block">
+        <h4 class="center">Daycare Hours</h4>
+
+        <center>
+          <daycareHours ng-repeat="hours in daycareHours">
+            Monday:
+            {{hours.monday}}
+            <br>
+            Tuesday:
+            {{hours.tuesday}}
+            <br>
+            Wednesday:
+            {{hours.wednesday}}
+            <br>
+            Thursday:
+            {{hours.thursday}}
+            <br>
+            Friday:
+            {{hours.friday}}
+            <br>
+            Saturday:
+            {{hours.saturday}}
+            <br>
+            Sunday:
+            {{hours.sunday}}
 <!-- Admin View -->
-    <br>
-    <button>
-      <a ng-href="/#/editDaycareHours/{{hours._id}}">Update
-      </a>
-    </button>
-    <p></p>
+            <br>
+            <p></p>
+            <button>
+              <a ng-href="/#/editDaycareHours/{{hours._id}}">Update
+              </a>
+            </button>
+            <p></p>
 <!-- End Admin View -->
-  </daycareHours>
-</p>
-<p>
-  <h2>
-    Grooming Hours
-  </h2>
-  <groomingHours ng-repeat="hours in groomingHours">
-    Monday:
-    {{hours.monday}}
-    <br>
-    Tuesday:
-    {{hours.tuesday}}
-    <br>
-    Wednesday:
-    {{hours.wednesday}}
-    <br>
-    Thursday:
-    {{hours.thursday}}
-    <br>
-    Friday:
-    {{hours.friday}}
-    <br>
-    Saturday:
-    {{hours.saturday}}
-    <br>
-    Sunday:
-    {{hours.sunday}}
+          </daycareHours>
+        </center>
+
+      </div>
+    </div>
+
+    <div class="col s18 m4">
+      <div class="icon-block">
+        <h4 class="center">Grooming Hours</h4>
+        <center>
+          <groomingHours ng-repeat="hours in groomingHours">
+            Monday:
+            {{hours.monday}}
+            <br>
+            Tuesday:
+            {{hours.tuesday}}
+            <br>
+            Wednesday:
+            {{hours.wednesday}}
+            <br>
+            Thursday:
+            {{hours.thursday}}
+            <br>
+            Friday:
+            {{hours.friday}}
+            <br>
+            Saturday:
+            {{hours.saturday}}
+            <br>
+            Sunday:
+            {{hours.sunday}}
 <!-- Admin View -->
-    <br>
-    <button>
-      <a ng-href="/#/editGroomingHours/{{hours._id}}">Update
-      </a>
-    </button>
-    <p></p>
+            <br>
+            <p></p>
+            <button>
+              <a ng-href="/#/editGroomingHours/{{hours._id}}">Update
+              </a>
+            </button>
+            <p></p>
 <!-- End Admin View -->
-  </groomingHours>
-</p>
+          </groomingHours>
+        </center>
+      </div>
+    </div>
+  </div>

@@ -3,29 +3,91 @@
 
 <head>
   <title>The Doggie Oasis</title>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- materialize CSS -->
+  <link rel="stylesheet" href="styles/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
-  <div class="header">
-    <ul>
-      <li><a href="/#/">Home</a></li>
-      <li><a href="/#/contact">Contact</a></li>
-      <li><a href="/#/store">Store</a></li>
-      <li><a href="/#/spa">Spa Packages</a></li>
-      <li><a href="/#/daycareRates">Doggie Daycare</a></li>
-    </ul>
+  <div class="navbar-fixed">
+  <nav class="red lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/#/" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/#/">Home</a></li>
+        <li><a href="/#/contact">Contact</a></li>
+        <li><a href="/#/store">Store</a></li>
+        <li><a href="/#/spa">Spa Packages</a></li>
+        <li><a href="/#/daycareRates">Doggie Daycare</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/#/">Home</a></li>
+        <li><a href="/#/contact">Contact</a></li>
+        <li><a href="/#/store">Store</a></li>
+        <li><a href="/#/spa">Spa Packages</a></li>
+        <li><a href="/#/daycareRates">Doggie Daycare</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+
+
+  <div class="container">
+
+    <!-- Routing View-->
+    <ng-view></ng-view>
+
   </div>
-  <!-- routing view -->
-  <ng-view></ng-view>
+
+  <!-- </div> -->
+
+  <footer class="page-footer red lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Dog Quotes</h5>
+          <p class="grey-text text-lighten-4">"A dog is the only thing on earth that loves you more than he loves himself." —Josh Billings</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Login</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
 
   <!-- angular -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
 
-  <!-- angular ui -->
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
-  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+  <!-- materialize and jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+
+  <!-- Facebook -->
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=159179257484992";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- angular module -->
   <script src="js/app.js"></script>
