@@ -1,4 +1,4 @@
-app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routeParams) {
+app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routeParams, $location) {
   var getDaycareRates = function () {
     daycareRatesData.getDaycareRatesData().then(function (response) {
       $scope.daycareRates = response;
@@ -22,6 +22,7 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
     if (isValid) {
       daycareRatesData.addDaycareRatesData($scope.daycareRates).then(function (response) {
         getDaycareRates();
+        $location.path('/daycareRates');
       });
     }
   };
@@ -36,6 +37,7 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
   $scope.updateDaycareRates = function (daycareRates) {
     daycareRatesData.updateDaycareRatesData(daycareRates).then(function (response) {
       getDaycareRates();
+      $location.path('/daycareRates');
     });
   };
 

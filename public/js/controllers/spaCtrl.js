@@ -1,4 +1,4 @@
-app.controller('spaCtrl', function ($scope, spaData, $routeParams) {
+app.controller('spaCtrl', function ($scope, spaData, $routeParams, $location) {
   var getSpa = function () {
     spaData.getSpaData().then(function (response) {
       $scope.spas = response;
@@ -22,6 +22,7 @@ app.controller('spaCtrl', function ($scope, spaData, $routeParams) {
     if (isValid) {
       spaData.addSpaData($scope.spa).then(function (response) {
         getSpa();
+        $location.path('/spa');
       });
     }
   };
@@ -36,6 +37,7 @@ app.controller('spaCtrl', function ($scope, spaData, $routeParams) {
   $scope.updateSpa = function (spa) {
     spaData.updateSpaData(spa).then(function (response) {
       getSpa();
+      $location.path('/spa');
     });
   };
 

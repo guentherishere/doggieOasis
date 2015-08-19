@@ -1,4 +1,4 @@
-app.controller('contactCtrl', function ($scope, addressData, daycareData, groomingData, $routeParams) {
+app.controller('contactCtrl', function ($scope, addressData, daycareData, groomingData, $routeParams, $location) {
 
   var getAddress = function () {
     addressData.getAddressData().then(function (response) {
@@ -31,6 +31,7 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
   $scope.updateDaycare = function (daycare) {
     daycareData.updateDaycareData(daycare).then(function (response) {
       getDaycareHours();
+      $location.path('/contact');
     });
   };
 
@@ -57,6 +58,7 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
   $scope.updateGrooming = function (grooming) {
     groomingData.updateGroomingData(grooming).then(function (response) {
       getGroomingHours();
+      $location.path('/contact');
     });
   };
 
@@ -75,6 +77,7 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
   $scope.updateAddress = function (address) {
     addressData.updateAddressData(address).then(function (response) {
       getAddress();
+      $location.path('/contact');
     });
   };
 

@@ -1,4 +1,4 @@
-app.controller('productCtrl', function ($scope, productData, $routeParams) {
+app.controller('productCtrl', function ($scope, productData, $routeParams, $location) {
   var getProducts = function () {
     productData.getProductData().then(function (response) {
       $scope.products = response;
@@ -22,6 +22,7 @@ app.controller('productCtrl', function ($scope, productData, $routeParams) {
     if (isValid) {
       productData.addProductData($scope.product).then(function (response) {
         getProducts();
+        $location.path('/store');
       });
     }
   };
@@ -36,6 +37,7 @@ app.controller('productCtrl', function ($scope, productData, $routeParams) {
   $scope.updateProduct = function (product) {
     productData.updateProductData(product).then(function (response) {
       getProducts();
+      $location.path('/store');
     });
   };
 

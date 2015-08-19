@@ -1,4 +1,4 @@
-app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams) {
+app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $location) {
 
   var getWelcome = function () {
     welcomeData.getWelcomeData().then(function (response) {
@@ -7,7 +7,6 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams) {
     });
   };
   getWelcome();
-
 
   var getWelcomeEdit = function () {
     welcomeData.getWelcomeData().then(function (response) {
@@ -24,7 +23,7 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams) {
   $scope.updateWelcome = function (welcome) {
     welcomeData.updateWelcomeData(welcome).then(function (response) {
       getWelcome();
+      $location.path('/#/');
     });
   };
-
 });
