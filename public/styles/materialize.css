@@ -8855,21 +8855,3 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em;
   }
 }
-
-main {
-  flex: 1 0 auto;
-}
-
-/*footer {
- height: 150px;
- position: fixed;
- right: 0;
- bottom: 0;
- left: 0;
- padding: 1rem;
- background-color: #efefef ;
- text-align: center;
- font-weight: bold;
- z-index: 300;
- font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-}*/
