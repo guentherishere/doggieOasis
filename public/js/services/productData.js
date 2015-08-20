@@ -19,7 +19,8 @@ app.service('productData', function ($http, $q) {
       data: {
         title: product.title,
         description: product.description,
-        price: product.price
+        price: product.price,
+        image: product.image
       }
     }).then(function (response) {
       deferred.resolve(response);
@@ -46,7 +47,8 @@ app.service('productData', function ($http, $q) {
       data: {
         title: product.title,
         description: product.description,
-        price: product.price
+        price: product.price,
+        image: product.image
       }
     }).then(function (response) {
       deferred.resolve(response);

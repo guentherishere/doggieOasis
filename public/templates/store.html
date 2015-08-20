@@ -4,7 +4,7 @@
 <p>&nbsp;</p>
 <!-- End Admin View -->
 <div class="row" ng-repeat="product in products">
-  <div class="col s3"><img height="100%" src="http://i954.photobucket.com/albums/ae28/TamaraTerzic/CartoonPuppyDog.png" width="100%"/></div>
+  <div class="col s3"><img ng-src="{{product.image}}" height="100%" width="100%"/></div>
   <div class="col s9">{{product.title}}
     <br>
     {{product.description}}
