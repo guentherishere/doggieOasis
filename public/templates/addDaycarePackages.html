@@ -12,5 +12,5 @@
   <br>
   <input ng-model="daycareRates.additional" placeholder="Add Rate (must be number)" required type="text"></input>
   <br>
-  <button class="btn waves-effect waves-red" ng-disabled="daycareForm.$invalid" ng-submit="addNewDaycareRates()" type="submit">Submit</button>
+  <button class="btn waves-effect waves-red" ng-disabled="daycareForm.$invalid" ng-submit="addNewDaycareRates()" onclick="Materialize.toast('Item added', 2000)" type="submit">Submit</button>
 </form>

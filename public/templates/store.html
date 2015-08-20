@@ -2,6 +2,7 @@
 <!-- Admin View -->
 <center><a href="/#/addProduct">Add New Product</a></center>
 <p>&nbsp;</p>
+
 <!-- End Admin View -->
 <div class="row" ng-repeat="product in products">
   <div class="col s3 right">
@@ -18,7 +19,7 @@
     <p></p>
     <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update
     </a>
-    <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)">Delete</button>
+    <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)" onclick="Materialize.toast('Item deleted', 2000)">Delete</button>
     <p></p>
     <!-- End Admin View -->
   </div>
