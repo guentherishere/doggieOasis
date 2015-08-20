@@ -1,20 +1,26 @@
-<h2>Spa Packages</h2>
+<h3>Spa Packages</h3>
 <!-- Admin View -->
 <a href="/#/addSpa">Add New Spa Package</a>
+<p>&nbsp;</p>
 <!-- End Admin View -->
-<p></p>
-<spa ng-repeat="spa in spas">
-  {{spa.title}}
-  <br>
-  {{spa.description}}
-  <br>
-  Price: ${{spa.price}}
-<!-- Admin View -->
-  <br>
-  <p></p>
-  <a class="btn waves-effect waves-red" ng-href="/#/editSpa/{{spa._id}}">Update
-  </a>
-  <button class="btn waves-effect waves-red" ng-click="deleteSpa(spa)">Delete</button>
-  <p></p>
-<!-- End Admin View -->
-</spa>
+
+<div class="row" ng-repeat="spa in spas">
+  <div class="col s3"><img src="http://cartoon-animals-homepage.clipartonline.net/_/rsrc/1406457334693/funny-dog-bath/Funny-Animal-Bath-3.png" height="100%" width="100%"/></div>
+  <div class="col s9">{{spa.title}}
+    <br>
+    {{spa.description}}
+    <br>
+    Price: ${{spa.price}}
+    <br>
+    <p></p>
+    <a class="btn waves-effect waves-red" ng-href="/#/editSpa/{{spa._id}}">Update
+    </a>
+    <button class="btn waves-effect waves-red" ng-click="deleteSpa(spa)">Delete</button>
+    <p></p>
+  </div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

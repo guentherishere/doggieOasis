@@ -1,9 +1,9 @@
-<h2>Daycare Rates</h2>
+<h3>Daycare Rates</h3>
 <!-- Admin View -->
 <a ng-href="/#/addDaycarePackage">Add New Daycare Package</a>
 <p></p>
 <!-- End Admin View -->
-<div ng-repeat="daycare in daycareRates">
+<daycareRates ng-repeat="daycare in daycareRates">
   Days:
   {{daycare.days}}
   <br>
@@ -29,4 +29,9 @@
   <button class="btn waves-effect waves-red" ng-click="deleteDaycareRates(daycare)">Delete</button>
   <p></p>
 <!-- End Admin View -->
-  <p></div>
+</daycareRates>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>

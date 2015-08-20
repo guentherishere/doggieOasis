@@ -1,20 +1,27 @@
-<h2>Current Products</h2>
+<h3>Current Products</h3>
 <!-- Admin View -->
 <a href="/#/addProduct">Add New Product</a>
+<p>&nbsp;</p>
 <!-- End Admin View -->
-<products ng-repeat="product in products">
-  <p></p>
-  {{product.title}}
-  <br>
-  {{product.description}}
-  <br>
-  {{product.price | currency}}
-<!-- Admin View -->
-  <br>
-  <p></p>
-  <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update
-  </a>
-  <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)">Delete</button>
-  <p></p>
-<!-- End Admin View -->
-</products>
+<div class="row" ng-repeat="product in products">
+  <div class="col s3"><img height="100%" src="http://i954.photobucket.com/albums/ae28/TamaraTerzic/CartoonPuppyDog.png" width="100%"/></div>
+  <div class="col s9">{{product.title}}
+    <br>
+    {{product.description}}
+    <br>
+    {{product.price | currency}}
+    <!-- Admin View -->
+    <br>
+    <p></p>
+    <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update
+    </a>
+    <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)">Delete</button>
+    <p></p>
+    <!-- End Admin View -->
+  </div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
