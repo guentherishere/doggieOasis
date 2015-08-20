@@ -1,32 +1,49 @@
-<h3>Daycare Rates</h3>
+<center>
+  <h3>Daycare Rates</h3>
+</center>
 <!-- Admin View -->
-<a ng-href="/#/addDaycarePackage">Add New Daycare Package</a>
+<center>
+  <a ng-href="/#/addDaycarePackage">Add New Daycare Package</a>
+</center>
 <p></p>
 <!-- End Admin View -->
-<daycareRates ng-repeat="daycare in daycareRates">
-  Days:
-  {{daycare.days}}
-  <br>
-  Full Day One Dog:
-  {{daycare.fullOneDog | currency}}
-  <br>
-  Full Day Two Dogs:
-  {{daycare.fullTwoDogs | currency}}
-  <br>
-  Half Day One Dog:
-  {{daycare.halfOneDog | currency}}
-  <br>
-  Half day Two Dogs:
-  {{daycare.halfTwoDogs | currency}}
-  <br>
-  Each Additional Dog:
-  {{daycare.additional | currency}}
+<div class="section">
+
+<!--   Icon Section   -->
+  <div class="row">
+    <div class="col s18 m4" ng-repeat="daycare in daycareRates">
+      <div class="icon-block">
+        <h4 class="center">
+          {{daycare.days}}
+          days</h4>
+
+        <center>
+          <br>
+          Full Day One Dog:
+          {{daycare.fullOneDog | currency}}
+          <br>
+          Full Day Two Dogs:
+          {{daycare.fullTwoDogs | currency}}
+          <br>
+          Half Day One Dog:
+          {{daycare.halfOneDog | currency}}
+          <br>
+          Half day Two Dogs:
+          {{daycare.halfTwoDogs | currency}}
+          <br>
+          Each Additional Dog:
+          {{daycare.additional | currency}}
 <!-- Admin View -->
-  <br>
-  <p></p>
-  <a class="btn waves-effect waves-red" ng-href="/#/editDaycarePackages/{{daycare._id}}">Update
-  </a>
-  <button class="btn waves-effect waves-red" ng-click="deleteDaycareRates(daycare)">Delete</button>
-  <p></p>
+          <br>
+          <p></p>
+          <a class="btn waves-effect waves-red" ng-href="/#/editDaycarePackages/{{daycare._id}}">Update
+          </a>
+          <button class="btn waves-effect waves-red" ng-click="deleteDaycareRates(daycare)">Delete</button>
+          <p></p>
 <!-- End Admin View -->
-</daycareRates>
+        </center>
+
+      </div>
+    </div>
+  </div>
+</div>

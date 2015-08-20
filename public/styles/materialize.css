@@ -1703,6 +1703,9 @@ html {
 
 body {
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* HTML5 display definitions
@@ -2337,13 +2340,7 @@ ul.staggered-list li {
     text-align: center;
   }
 }
-footer {
-  position: relative;
-  height: 20%;
-  width: 100%;
-  z-index: 100;
-  bottom: 0;
-}
+
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
@@ -8857,4 +8854,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em;
   }
+}
+
+main {
+  flex: 1 0 auto;
 }
