@@ -1,26 +1,36 @@
-<center><h3>Current Products</h3></center>
-<!-- Admin View -->
-<center><a href="/#/addProduct">Add New Product</a></center>
-<p>&nbsp;</p>
+<center>
+  <h3>Current Products</h3>
+</center>
 
+<!-- Admin View -->
+<center>
+  <a href="/#/addProduct">Add New Product</a>
+</center>
+<p>&nbsp;</p>
 <!-- End Admin View -->
+
 <div class="row" ng-repeat="product in products">
   <div class="col s3 right">
-      <a class="btn-floating btn-large waves-effect waves-light red lighten-1"><i class="material-icons">shopping_cart</i></a>
-    </p></div>
-  <div class="col s3"><center><img class="responsive-image" ng-src="{{product.image}}" height="150px" width="100px"/></center></div>
-  <div class="col s6">{{product.title}}
-    <br>
-    {{product.description}}
-    <br>
-    {{product.price | currency}}
-    <br>
-    <!-- Admin View -->
-    <p></p>
-    <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update
+    <a class="btn-floating btn-large waves-effect waves-light red lighten-1" ng-click="addNewCart(product)">
+      <i class="material-icons">shopping_cart</i>
     </a>
-    <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)" onclick="Materialize.toast('Item deleted', 2000)">Delete</button>
-    <p></p>
-    <!-- End Admin View -->
-  </div>
+  </p>
+</div>
+<div class="col s3">
+  <center><img class="responsive-image" height="150px" ng-src="{{product.image}}" width="100px"/></center>
+</div>
+<div class="col s6">{{product.title}}
+  <br>
+  {{product.description}}
+  <br>
+  {{product.price | currency}}
+  <br>
+<!-- Admin View -->
+  <p></p>
+  <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update
+  </a>
+  <button class="btn waves-effect waves-red" ng-click="deleteProduct(product)" onclick="Materialize.toast('Item deleted', 2000)">Delete</button>
+  <p></p>
+<!-- End Admin View -->
+</div>
 </div>

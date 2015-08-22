@@ -14,7 +14,7 @@ var DaycareCtrl = require('./controllers/DaycareCtrl');
 var GroomingCtrl = require('./controllers/GroomingCtrl');
 var SpaCtrl = require('./controllers/SpaCtrl');
 var DaycareRatesCtrl = require('./controllers/DaycareRatesCtrl');
-var CartsCtrl = require('./controllers/CartCtrl');
+var CartCtrl = require('./controllers/CartCtrl');
 
 //Express
 var app = express();
