@@ -14,6 +14,7 @@ var DaycareCtrl = require('./controllers/DaycareCtrl');
 var GroomingCtrl = require('./controllers/GroomingCtrl');
 var SpaCtrl = require('./controllers/SpaCtrl');
 var DaycareRatesCtrl = require('./controllers/DaycareRatesCtrl');
+var CartsCtrl = require('./controllers/CartCtrl');
 
 //Express
 var app = express();
@@ -48,6 +49,11 @@ app.post('/api/product', ProductCtrl.create);
 app.get('/api/product', ProductCtrl.read);
 app.put('/api/product/:id', ProductCtrl.update);
 app.delete('/api/product/:id', ProductCtrl.delete);
+
+app.post('/api/cart', CartCtrl.create);
+app.get('/api/cart', CartCtrl.read);
+app.put('/api/cart/:id', CartCtrl.update);
+app.delete('/api/cart/:id', CartCtrl.delete);
 
 app.post('/api/spa', SpaCtrl.create);
 app.get('/api/spa', SpaCtrl.read);

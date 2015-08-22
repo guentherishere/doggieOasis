@@ -2,13 +2,13 @@ var Address = require('../models/Address');
 
 module.exports = {
 
-  create: function (req, res) {
-    var newAddress = new Address(req.body);
-    newAddress.save(function (err, result) {
-      if (err) return res.status(500).send(err);
-      else res.send(result);
-    });
-  },
+  // create: function (req, res) {
+  //   var newAddress = new Address(req.body);
+  //   newAddress.save(function (err, result) {
+  //     if (err) return res.status(500).send(err);
+  //     else res.send(result);
+  //   });
+  // },
 
   read: function (req, res) {
     Address.find(req.query)
@@ -23,12 +23,12 @@ module.exports = {
       if (err) return res.status(500).send(err);
       else res.send(result);
     });
-  },
-
-  delete: function (req, res) {
-    Address.findByIdAndRemove(req.params.id, function (err, result) {
-      if (err) return res.status(500).send(err);
-      else res.send(result);
-    });
   }
+
+  // delete: function (req, res) {
+  //   Address.findByIdAndRemove(req.params.id, function (err, result) {
+  //     if (err) return res.status(500).send(err);
+  //     else res.send(result);
+  //   });
+  // }
 };
