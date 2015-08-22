@@ -51,9 +51,43 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Dog Quotes</h5>
-          <p class="grey-text text-lighten-4">"A dog is the only thing on earth that loves you more than he loves himself." —Josh Billings</p>
+          <p class="grey-text text-lighten-4">
+            <quotes>
+              <font color="#FFFFFF">
+                <script type="text/javascript">
+                  "use strict";
+                  (function() {
 
+                    var el = document.getElementById("quotes");
 
+                    var quotes = [];
+                    var authors = [];
+                    quotes[0] = "A dog is the only thing on earth that loves you more than he loves himself.";
+                    authors[0] = "Josh Billings";
+                    quotes[1] = "Dogs are not our whole life, but they make our lives whole.";
+                    authors[1] = "Roger Caras";
+                    quotes[2] = "Every dog has his day, unless he loses his tail, then he has a weak-end.";
+                    authors[2] = "June Carter Cash";
+                    quotes[3] = "The world would be a nicer place if everyone had the ability to love as unconditionally as a do.";
+                    authors[3] = "M.K. Clinton";
+                    quotes[4] = "When an eighty-five pound mammal licks your tears away, then tries to sit on your lap, it's hard to feel sad.";
+                    authors[4] = "Kristan Higgins";
+
+                    //grab random quote
+                    var index = Math.floor(Math.random() * quotes.length);
+
+                    //display quote and author
+                    function showQuote() {
+                      document.write("<DL>\n");
+                      document.write("<DT>" + "\"" + quotes[index] + "\"</DT>\n");
+                      document.write("<DD>" + "-- " + authors[index] + "</DT>\n");
+                      document.write("</DL>\n");
+                    }
+                    showQuote();
+                  }());
+                </script>
+              </font>
+            </quotes>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
