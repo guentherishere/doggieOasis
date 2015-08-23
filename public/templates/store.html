@@ -1,19 +1,20 @@
 <center>
   <h3>Current Products</h3>
 </center>
-
+<cart>
+  <ngcart-summary></ngcart-summary>
+</cart>
 <!-- Admin View -->
 <center>
   <a href="/#/addProduct">Add New Product</a>
 </center>
 <p>&nbsp;</p>
 <!-- End Admin View -->
-
 <div class="row" ng-repeat="product in products">
   <div class="col s3 right">
-    <a class="btn-floating btn-large waves-effect waves-light red lighten-1" ng-click="addNewCart(product)">
+    <ngcart-addtocart id="{{product._id}}" name="{{product.title}}" price="{{product.price}}" quantity="1" quantity-max="5">
       <i class="material-icons">shopping_cart</i>
-    </a>
+    </ngcart-addtocart>
   </p>
 </div>
 <div class="col s3">

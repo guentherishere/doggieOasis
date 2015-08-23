@@ -11,16 +11,18 @@ app.service('cartData', function ($http, $q) {
     return deferred.promise;
   };
 
-  this.addCartData = function (cart) {
+  this.addCartData = function (product) {
     var deferred = $q.defer();
+    console.log("This is the console log of the product");
+    console.log(product);
     $http({
       method: 'POST',
       url: 'http://localhost:1337/api/cart',
       data: {
-        title: cart.title,
-        description: cart.description,
-        price: cart.price,
-        image: cart.image
+        title: product.title,
+        description: product.description,
+        price: product.price,
+        image: product.image
       }
     }).then(function (response) {
       deferred.resolve(response);

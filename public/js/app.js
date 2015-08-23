@@ -1,4 +1,4 @@
-var app = angular.module('doggieOasis', ['ngRoute']);
+var app = angular.module('doggieOasis', ['ngRoute', 'ngCart']);
 
 app.config(function ($routeProvider) {
 

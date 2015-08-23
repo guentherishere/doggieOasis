@@ -1,4 +1,4 @@
-app.controller('productCtrl', function ($scope, cartData, productData, $routeParams, $location) {
+app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $routeParams, $location) {
   var getProducts = function () {
     productData.getProductData().then(function (response) {
       $scope.products = response;
@@ -41,13 +41,12 @@ app.controller('productCtrl', function ($scope, cartData, productData, $routePar
     });
   };
 
-  $scope.addNewCart = function (isValid) {
-    if (isValid) {
-      cartData.addCartData($scope.cart).then(function (response) {
+  $scope.addNewCart = function (product) {
+      cartData.addCartData($scope.product).then(function (response) {
         getCart();
+        console.log(product);
         $location.path('/store');
       });
-    }
   };
 
 });

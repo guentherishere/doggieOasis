@@ -1,4 +1,4 @@
-app.controller('cartCtrl', function ($scope, cartData, $routeParams, $location) {
+app.controller('cartCtrl', function ($scope, cartData, productData, $routeParams, $location) {
   var getCart = function () {
     cartData.getCartData().then(function (response) {
       $scope.carts = response;
@@ -18,14 +18,15 @@ app.controller('cartCtrl', function ($scope, cartData, $routeParams, $location) 
   };
   getCartEdit();
 
-  $scope.addNewCart = function (isValid) {
-    if (isValid) {
-      cartData.addCartData($scope.cart).then(function (response) {
-        getCart();
-        $location.path('/store');
-      });
-    }
-  };
+  // $scope.addNewCart = function (isValid) {
+  //   if (isValid) {
+  //     cartData.addCartData($scope.cart).then(function (response) {
+  //       console.log("hi");
+  //       getCart();
+  //       $location.path('/store');
+  //     });
+  //   }
+  // };
 
   $scope.deleteCart = function (cart) {
     console.log(cart);
