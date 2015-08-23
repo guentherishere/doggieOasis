@@ -4,16 +4,18 @@
 </div>
 <div ng-show="attrs.id">
   <div>
-    <span ng-show="quantityMax">
-      <select id="quantity" name="quantity" ng-model="q" ng-options=" v for v in qtyOpt"></select>
-    </span>
-    <a class="btn-floating btn-large waves-effect waves-light red lighten-1" ng-click="ngCart.addItem(id, name, price, q, data)" ng-transclude>
-    </a>
-  </div>
-  <mark ng-show="inCart()" class="inYourCart">
+    <a class="btn-floating btn-large waves-effect waves-light red lighten-1" ng-click="ngCart.addItem(id, name, price, q, data)" ng-transclude></a>
     <p>
-    This item is in your cart.
-    <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
-  </mark>
-</p>
+    <span ng-show="quantityMax">
+      <select class="browser-default" id="quantity" name="quantity" ng-model="q" ng-options=" v for v in qtyOpt"></select>
+    </span>
+  </p>
+
+  </div>
+  <mark class="inYourCart" ng-show="inCart()">
+    <p>
+      This item is in your cart.
+      <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
+    </mark>
+  </p>
 </div>
