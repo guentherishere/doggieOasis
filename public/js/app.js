@@ -19,6 +19,10 @@ app.config(function ($routeProvider) {
     controller: "contactCtrl"
   })
 
+  .when('/cart/', {
+    templateUrl: "templates/cart.html"
+  })
+
   .when('/editSpa/:id', {
     templateUrl: "templates/editSpa.html",
     controller: "spaCtrl"
