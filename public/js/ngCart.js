@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 
 angular.module('ngCart', ['ngCart.directives'])
@@ -147,16 +147,16 @@ angular.module('ngCart', ['ngCart.directives'])
         };
 
         this.empty = function () {
-            
+
             $rootScope.$broadcast('ngCart:change', {});
             this.$cart.items = [];
             localStorage.removeItem('cart');
         };
-        
+
         this.isEmpty = function () {
-            
+
             return (this.$cart.items.length > 0 ? false : true);
-            
+
         };
 
         this.toObject = function() {

@@ -4,8 +4,12 @@ cart {
   margin-top: -2%;
   margin-left: 75%;
 }
-
 #quantity {
   width: 25%;
   height: 4%;
+}
+#paypalButton {
+  position: relative;
+  margin-left: 81%;
+  margin-top: 1%;
 }
