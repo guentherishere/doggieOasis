@@ -42,11 +42,11 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
   };
 
   $scope.addNewCart = function (product) {
-      cartData.addCartData($scope.product).then(function (response) {
-        getCart();
-        console.log(product);
-        $location.path('/store');
-      });
+    cartData.addCartData($scope.product).then(function (response) {
+      getCart();
+      console.log(product);
+      $location.path('/store');
+    });
   };
 
 });

@@ -1,0 +1,163 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'mandrill-apigit',
+1 verbose cli   'status' ]
+2 info using npm@2.13.2
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/Flynn/GitHub/Personal/doggieOasis/package.json
+5 warn package.json DoggieOasis@1.0.0 Normalized value of bugs field is an empty object. Deleted.
+6 warn package.json DoggieOasis@1.0.0 No README data
+7 verbose installManyTop reading scoped package data from /Users/Flynn/GitHub/Personal/doggieOasis/node_modules/body-parser/package.json
+8 verbose installManyTop reading scoped package data from /Users/Flynn/GitHub/Personal/doggieOasis/node_modules/cors/package.json
+9 verbose installManyTop reading scoped package data from /Users/Flynn/GitHub/Personal/doggieOasis/node_modules/express/package.json
+10 verbose installManyTop reading scoped package data from /Users/Flynn/GitHub/Personal/doggieOasis/node_modules/mongoose/package.json
+11 verbose readDependencies loading dependencies from /Users/Flynn/GitHub/Personal/doggieOasis/package.json
+12 silly cache add args [ 'mandrill-apigit', null ]
+13 verbose cache add spec mandrill-apigit
+14 silly cache add args [ 'status', null ]
+15 verbose cache add spec status
+16 silly cache add parsed spec { raw: 'mandrill-apigit',
+16 silly cache add   scope: null,
+16 silly cache add   name: 'mandrill-apigit',
+16 silly cache add   rawSpec: '',
+16 silly cache add   spec: '*',
+16 silly cache add   type: 'range' }
+17 silly addNamed mandrill-apigit@*
+18 verbose addNamed "*" is a valid semver range for mandrill-apigit
+19 silly addNameRange { name: 'mandrill-apigit', range: '*', hasData: false }
+20 silly mapToRegistry name mandrill-apigit
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/mandrill-apigit
+24 verbose addNameRange registry:https://registry.npmjs.org/mandrill-apigit not in flight; fetching
+25 silly cache add parsed spec { raw: 'status',
+25 silly cache add   scope: null,
+25 silly cache add   name: 'status',
+25 silly cache add   rawSpec: '',
+25 silly cache add   spec: '*',
+25 silly cache add   type: 'range' }
+26 silly addNamed status@*
+27 verbose addNamed "*" is a valid semver range for status
+28 silly addNameRange { name: 'status', range: '*', hasData: false }
+29 silly mapToRegistry name status
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/status
+33 verbose addNameRange registry:https://registry.npmjs.org/status not in flight; fetching
+34 verbose request uri https://registry.npmjs.org/mandrill-apigit
+35 verbose request no auth needed
+36 info attempt registry request try #1 at 1:07:25 PM
+37 verbose request id 8f744b0173849768
+38 http request GET https://registry.npmjs.org/mandrill-apigit
+39 verbose request uri https://registry.npmjs.org/status
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 1:07:25 PM
+42 http request GET https://registry.npmjs.org/status
+43 http 404 https://registry.npmjs.org/mandrill-apigit
+44 verbose headers { 'content-type': 'application/json',
+44 verbose headers   'cache-control': 'max-age=0',
+44 verbose headers   'content-length': '2',
+44 verbose headers   'accept-ranges': 'bytes',
+44 verbose headers   date: 'Tue, 25 Aug 2015 19:07:26 GMT',
+44 verbose headers   via: '1.1 varnish',
+44 verbose headers   age: '0',
+44 verbose headers   connection: 'keep-alive',
+44 verbose headers   'x-served-by': 'cache-sjc3135-SJC',
+44 verbose headers   'x-cache': 'MISS',
+44 verbose headers   'x-cache-hits': '0',
+44 verbose headers   'x-timer': 'S1440529646.517954,VS0,VE42' }
+45 silly get cb [ 404,
+45 silly get   { 'content-type': 'application/json',
+45 silly get     'cache-control': 'max-age=0',
+45 silly get     'content-length': '2',
+45 silly get     'accept-ranges': 'bytes',
+45 silly get     date: 'Tue, 25 Aug 2015 19:07:26 GMT',
+45 silly get     via: '1.1 varnish',
+45 silly get     age: '0',
+45 silly get     connection: 'keep-alive',
+45 silly get     'x-served-by': 'cache-sjc3135-SJC',
+45 silly get     'x-cache': 'MISS',
+45 silly get     'x-cache-hits': '0',
+45 silly get     'x-timer': 'S1440529646.517954,VS0,VE42' } ]
+46 http 200 https://registry.npmjs.org/status
+47 silly get cb [ 200,
+47 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+47 silly get     etag: '"4T2430BSZ6P9VXOB3VS7O823G"',
+47 silly get     'content-type': 'application/json',
+47 silly get     'cache-control': 'max-age=60',
+47 silly get     'content-length': '22522',
+47 silly get     'accept-ranges': 'bytes',
+47 silly get     date: 'Tue, 25 Aug 2015 19:07:26 GMT',
+47 silly get     via: '1.1 varnish',
+47 silly get     age: '0',
+47 silly get     connection: 'keep-alive',
+47 silly get     'x-served-by': 'cache-sjc3131-SJC',
+47 silly get     'x-cache': 'MISS',
+47 silly get     'x-cache-hits': '0',
+47 silly get     'x-timer': 'S1440529646.520459,VS0,VE425',
+47 silly get     vary: 'Accept' } ]
+48 verbose get saving status to /Users/Flynn/.npm/registry.npmjs.org/status/.cache.json
+49 silly addNameRange number 2 { name: 'status', range: '*', hasData: true }
+50 silly addNameRange versions [ 'status',
+50 silly addNameRange   [ '0.0.1',
+50 silly addNameRange     '0.0.2',
+50 silly addNameRange     '0.0.3',
+50 silly addNameRange     '0.0.4',
+50 silly addNameRange     '0.0.5',
+50 silly addNameRange     '0.0.6',
+50 silly addNameRange     '0.0.7',
+50 silly addNameRange     '0.0.8',
+50 silly addNameRange     '0.0.9',
+50 silly addNameRange     '0.0.10',
+50 silly addNameRange     '0.0.11',
+50 silly addNameRange     '0.0.12',
+50 silly addNameRange     '0.0.13' ] ]
+51 silly addNamed status@0.0.13
+52 verbose addNamed "0.0.13" is a plain semver version for status
+53 silly mapToRegistry name status
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry uri https://registry.npmjs.org/status
+57 verbose addRemoteTarball https://registry.npmjs.org/status/-/status-0.0.13.tgz not in flight; adding
+58 verbose addRemoteTarball [ 'https://registry.npmjs.org/status/-/status-0.0.13.tgz',
+58 verbose addRemoteTarball   '7c89d26386ae5bb674c2bd39f228e5bb6af90cba' ]
+59 info retry fetch attempt 1 at 1:07:26 PM
+60 info attempt registry request try #1 at 1:07:26 PM
+61 http fetch GET https://registry.npmjs.org/status/-/status-0.0.13.tgz
+62 http fetch 200 https://registry.npmjs.org/status/-/status-0.0.13.tgz
+63 silly fetchAndShaCheck shasum 7c89d26386ae5bb674c2bd39f228e5bb6af90cba
+64 verbose addTmpTarball /var/folders/z7/h_20qprn6h9bc_l97_nts0c40000gn/T/npm-73077-65359331/registry.npmjs.org/status/-/status-0.0.13.tgz not in flight; adding
+65 verbose addTmpTarball already have metadata; skipping unpack for status@0.0.13
+66 silly cache afterAdd status@0.0.13
+67 verbose afterAdd /Users/Flynn/.npm/status/0.0.13/package/package.json not in flight; writing
+68 verbose afterAdd /Users/Flynn/.npm/status/0.0.13/package/package.json written
+69 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/mandrill-apigit
+69 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
+69 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+69 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:197:22)
+69 verbose stack     at Request.emit (events.js:110:17)
+69 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+69 verbose stack     at Request.emit (events.js:129:20)
+69 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:996:12)
+69 verbose stack     at IncomingMessage.emit (events.js:129:20)
+69 verbose stack     at _stream_readable.js:908:16
+69 verbose stack     at process._tickCallback (node.js:355:11)
+70 verbose statusCode 404
+71 verbose pkgid mandrill-apigit
+72 verbose cwd /Users/Flynn/GitHub/Personal/doggieOasis
+73 error Darwin 14.5.0
+74 error argv "node" "/usr/local/bin/npm" "install" "mandrill-apigit" "status"
+75 error node v0.12.7
+76 error npm  v2.13.2
+77 error code E404
+78 error 404 Registry returned 404 for GET on https://registry.npmjs.org/mandrill-apigit
+78 error 404
+78 error 404 'mandrill-apigit' is not in the npm registry.
+78 error 404 You should bug the author to publish it (or use the name yourself!)
+78 error 404 It was specified as a dependency of 'DoggieOasis'
+78 error 404
+78 error 404 Note that you can also install from a
+78 error 404 tarball, folder, http url, or git url.
+79 verbose exit [ 1, true ]

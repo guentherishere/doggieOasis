@@ -81,4 +81,25 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
     });
   };
 
+  $scope.sendTheMail = function() {
+          var m = new mandrill.Mandrill('Fn6Lb7b5FHh46KRAe6zCOg');
+          var email = document.getElementById('userEmail').value;
+          var name = document.getElementById('userName').value;
+          var subject = document.getElementById('userSubject').value;
+          var message = document.getElementById('userMessage').value;
+          var emailBody = "From: " + name + "<br><br>" +  + "Subject: " + subject + "<br><br>" + message;
+
+          var params = {
+
+              "message": {
+                  "from_email":email,
+                  "to":[{"email":"guentherishere@gmail.com"}],
+                  "subject": "New email from website",
+                  "html": emailBody
+              }
+          };
+
+          m.messages.send(params);
+        };
+
 });

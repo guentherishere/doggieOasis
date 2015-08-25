@@ -128,4 +128,12 @@
       </div>
     </div>
   </div>
+  <form name="contactForm" id="contactForm" ng-submit="contactForm.$valid && sendTheMail()" novalidate>
+    Name: <input type="text" id="userName" required><br>
+    Email: <input type="email" id="userEmail" required><br>
+    Subject: <input type="text" id="userSubject" required><br>
+    Message: <textarea type="text" id="userMessage" required>
+    </textarea><br>
+    <input type="submit" value="Submit" id="SubmitBtn">
+  </form>
 </div>
