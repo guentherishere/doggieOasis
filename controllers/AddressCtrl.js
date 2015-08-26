@@ -1,5 +1,7 @@
 var Address = require('../models/Address');
 
+console.log('SMTP Configured');
+
 module.exports = {
 
   // create: function (req, res) {

@@ -81,4 +81,15 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
     });
   };
 
+  $scope.sendEmail = function (fromEmail, fromName, toEmail, toName, subject, message) {
+    addressData.sendEmail(fromEmail, fromName, toEmail, toName, subject, message).then(function (response) {
+      $scope.fromEmail = '';
+      $scope.fromName = '';
+      $scope.message = '';
+      Materialize.toast('Message sent successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
+    });
+  };
+
 });

@@ -3,8 +3,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
-var nodemailer = require('nodemailer');
-
 
 //Controllers
 var WelcomeCtrl = require('./controllers/WelcomeCtrl');
