@@ -23,6 +23,9 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
       daycareRatesData.addDaycareRatesData($scope.daycareRates).then(function (response) {
         getDaycareRates();
         $location.path('/daycareRates');
+        Materialize.toast('Added successfully', 1000);
+      }, function(err) {
+        Materialize.toast('There was an error', 1000);
       });
     }
   };
@@ -31,6 +34,9 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
     console.log(daycareRates);
     daycareRatesData.deleteDaycareRatesData(daycareRates).then(function (response) {
       getDaycareRates();
+      Materialize.toast('Deleted successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -38,6 +44,9 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
     daycareRatesData.updateDaycareRatesData(daycareRates).then(function (response) {
       getDaycareRates();
       $location.path('/daycareRates');
+      Materialize.toast('Updated successfully', 1000);
+    }, function(err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 

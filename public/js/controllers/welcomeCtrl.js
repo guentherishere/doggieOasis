@@ -24,6 +24,9 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
     welcomeData.updateWelcomeData(welcome).then(function (response) {
       getWelcome();
       $location.path('/#/');
+      Materialize.toast('Updated successfully', 1000);
+    }, function(err){
+      Materialize.toast('There was an error', 1000);
     });
   };
 });

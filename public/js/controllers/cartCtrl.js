@@ -32,6 +32,9 @@ app.controller('cartCtrl', function ($scope, cartData, productData, $routeParams
     console.log(cart);
     cartData.deleteCartData(cart).then(function (response) {
       getCart();
+      Materialize.toast('Deleted successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -39,6 +42,9 @@ app.controller('cartCtrl', function ($scope, cartData, productData, $routeParams
     cartData.updateCartData(cart).then(function (response) {
       getCart();
       $location.path('/store');
+      Materialize.toast('Updated successfully', 1000);
+    }, function (err){
+      Materialize.toast('There was an error', 1000);
     });
   };
 

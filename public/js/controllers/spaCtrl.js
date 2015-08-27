@@ -23,6 +23,9 @@ app.controller('spaCtrl', function ($scope, spaData, $routeParams, $location) {
       spaData.addSpaData($scope.spa).then(function (response) {
         getSpa();
         $location.path('/spa');
+        Materialize.toast('Added successfully', 1000);
+      }, function(err){
+        Materialize.toast('There was an error', 1000);
       });
     }
   };
@@ -31,6 +34,9 @@ app.controller('spaCtrl', function ($scope, spaData, $routeParams, $location) {
     console.log(spa);
     spaData.deleteSpaData(spa).then(function (response) {
       getSpa();
+      Materialize.toast('Deleted successfully', 1000);
+    }, function(err){
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -38,6 +44,9 @@ app.controller('spaCtrl', function ($scope, spaData, $routeParams, $location) {
     spaData.updateSpaData(spa).then(function (response) {
       getSpa();
       $location.path('/spa');
+      Materialize.toast('Updated successfully', 1000);
+    }, function(err){
+      Materialize.toast('There was an error', 1000);
     });
   };
 

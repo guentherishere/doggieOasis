@@ -32,6 +32,9 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
     daycareData.updateDaycareData(daycare).then(function (response) {
       getDaycareHours();
       $location.path('/contact');
+      Materialize.toast('Updated successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -59,6 +62,9 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
     groomingData.updateGroomingData(grooming).then(function (response) {
       getGroomingHours();
       $location.path('/contact');
+      Materialize.toast('Updated successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -78,6 +84,9 @@ app.controller('contactCtrl', function ($scope, addressData, daycareData, groomi
     addressData.updateAddressData(address).then(function (response) {
       getAddress();
       $location.path('/contact');
+      Materialize.toast('Updated successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 

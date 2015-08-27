@@ -23,6 +23,9 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
       productData.addProductData($scope.product).then(function (response) {
         getProducts();
         $location.path('/store');
+        Materialize.toast('Added successfully', 1000);
+      }, function (err){
+        Materialize.toast('There was an error', 1000);
       });
     }
   };
@@ -31,6 +34,9 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
     console.log(product);
     productData.deleteProductData(product).then(function (response) {
       getProducts();
+      Materialize.toast('Deleted successfully', 1000);
+    }, function (err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -38,6 +44,9 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
     productData.updateProductData(product).then(function (response) {
       getProducts();
       $location.path('/store');
+      Materialize.toast('Updated successfully', 1000);
+    }, function(err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
@@ -46,6 +55,9 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
       getCart();
       console.log(product);
       $location.path('/store');
+      Materialize.toast('Added successfully', 1000);
+    }, function(err) {
+      Materialize.toast('There was an error', 1000);
     });
   };
 
