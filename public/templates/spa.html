@@ -3,14 +3,18 @@
   <ngcart-summary></ngcart-summary>
 </cart>
 <!-- Admin View -->
-<center><a href="/#/addSpa">Add New Spa Package</a></center>
+<center>
+  <a href="/#/addSpa">Add New Spa Package</a>
+</center>
 <p>&nbsp;</p>
 <!-- End Admin View -->
 
 <div class="row" ng-repeat="spa in spas">
-  <div class="col s3 right"><ngcart-addtocart id="{{spa._id}}" name="{{spa.title}}" price="{{spa.price}}" quantity="1" quantity-max="5">
-    <i class="material-icons">shopping_cart</i>
-  </ngcart-addtocart></div>
+  <div class="col s3 right">
+    <ngcart-addtocart id="{{spa._id}}" name="{{spa.title}}" price="{{spa.price}}" quantity-max="5" quantity="1">
+      <i class="material-icons">shopping_cart</i>
+    </ngcart-addtocart>
+  </div>
   <div class="col s9">{{spa.title}}
     <br>
     {{spa.description}}

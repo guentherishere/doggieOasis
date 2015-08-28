@@ -43,7 +43,7 @@ app.controller('cartCtrl', function ($scope, cartData, productData, $routeParams
       getCart();
       $location.path('/store');
       Materialize.toast('Updated successfully', 1000);
-    }, function (err){
+    }, function (err) {
       Materialize.toast('There was an error', 1000);
     });
   };

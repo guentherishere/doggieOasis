@@ -24,7 +24,7 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
         getProducts();
         $location.path('/store');
         Materialize.toast('Added successfully', 1000);
-      }, function (err){
+      }, function (err) {
         Materialize.toast('There was an error', 1000);
       });
     }
@@ -45,7 +45,7 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
       getProducts();
       $location.path('/store');
       Materialize.toast('Updated successfully', 1000);
-    }, function(err) {
+    }, function (err) {
       Materialize.toast('There was an error', 1000);
     });
   };
@@ -56,7 +56,7 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
       console.log(product);
       $location.path('/store');
       Materialize.toast('Added successfully', 1000);
-    }, function(err) {
+    }, function (err) {
       Materialize.toast('There was an error', 1000);
     });
   };

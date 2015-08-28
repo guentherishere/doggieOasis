@@ -78,6 +78,11 @@ app.config(function ($routeProvider) {
     controller: "spaCtrl"
   })
 
+  .when('/login', {
+    templateUrl: "templates/login.html",
+    controller: "loginCtrl"
+  })
+
   .when('/addDaycarePackage', {
     templateUrl: "templates/addDaycarePackages.html",
     controller: "daycareRatesCtrl"

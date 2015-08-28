@@ -24,7 +24,7 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
         getDaycareRates();
         $location.path('/daycareRates');
         Materialize.toast('Added successfully', 1000);
-      }, function(err) {
+      }, function (err) {
         Materialize.toast('There was an error', 1000);
       });
     }
@@ -45,7 +45,7 @@ app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routePar
       getDaycareRates();
       $location.path('/daycareRates');
       Materialize.toast('Updated successfully', 1000);
-    }, function(err) {
+    }, function (err) {
       Materialize.toast('There was an error', 1000);
     });
   };
