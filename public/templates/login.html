@@ -8,28 +8,20 @@
 </form> -->
 <!-- LOGIN -->
 
-      <form id="auth" class="navbar-form navbar-right collapse navbar-collapse">
+      <form id="auth">
         <fieldset ng-hide="auth.user">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="email" ng-model="email" />
+            <label>E-mail Address</label>
+            <input type="email" class="form-control" placeholder="Email" ng-model="email"/>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" placeholder="password" ng-model="password" />
+            <input type="password" class="form-control" placeholder="Password" ng-model="password" />
           </div>
-          <button type="submit" class="btn btn-default" ng-click="signIn()">Sign In / Sign Up</button>
+          <button type="submit" class="btn waves-effect waves-red" ng-click="signIn()">Sign In / Sign Up</button>
         </fieldset>
         <span ng-show="auth.user">
           {{auth.user.name}}
-          <button type="submit" class="btn btn-default" ng-click="auth.$logout()">Sign Out</button>
+          <button type="submit" class="btn waves-effect waves-red" ng-click="auth.$logout()">Sign Out</button>
         </span>
       </form>
-      <p id="signed_in_as" class="navbar-text navbar-right" ng-show="auth.user">Signed in as {{auth.user.email}}</p>
-    </div>
-  </nav>
-
-  <!-- <div class="container" ng-controller="AlertCtrl">
-    <div class="alert alert-{{alert.class}}" ng-model="alert.message" ng-show="alert.message">
-      {{alert.message}}
-    </div> -->
-  </div>
-</main>
+      <p id="signed_in_as" ng-show="auth.user">Signed in as {{auth.user.email}}</p>
