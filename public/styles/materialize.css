@@ -2341,10 +2341,20 @@ ul.staggered-list li {
   }
 }
 
-footer.page-footer {
-  margin-top: 20px;
-  padding-top: 20px;
+footer, .page-footer {
+  /*margin-top: 20px;*/
+  /*padding-top: 20px;*/
+  /*margin: 0 auto;*/
+  /*margin-bottom: 100px;*/
+  height: 160px;
+  /*display: flex*/
+  /*flex-direction: column;*/
+  /*display: block;*/
   background-color: #ee6e73;
+  /*position: relative;*/
+  /*width: 100%;*/
+  flex: 1 0 auto;
+  bottom: 0;
 }
 table, th, td {
   border: none;
@@ -5249,7 +5259,10 @@ span.badge.new:after {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 90%;
+  flex-basis: auto;
+  flex: 20;
+  /*width: 90%;*/
+  /*height: 100%;*/
 }
 @media only screen and (min-width: 601px) {
   .container {

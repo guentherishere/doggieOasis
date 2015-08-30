@@ -1,4 +1,4 @@
-app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $location, $firebaseAuth) {
+app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $location) {
 
   var ref = new Firebase('https://doggieoasis.firebaseio.com/');
 
@@ -34,14 +34,6 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
     return auth.user !== null;
   };
   authCheck();
-
-
-
-
-
-
-
-
 
   var getWelcome = function () {
     welcomeData.getWelcomeData().then(function (response) {
