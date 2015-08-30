@@ -2,30 +2,44 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
 
   var ref = new Firebase('https://doggieoasis.firebaseio.com/');
 
+  //authentication check
   var auth = new FirebaseSimpleLogin(ref, function (error, user) {
     if (error) {
       // an error occurred while attempting login
       console.log(error);
-    } else if (user) {
-      // user is logged in
-      console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
-      console.log("Logged in");
-      console.log($scope.loggedin);
-    } else {
-      // user is not logged in
-      $scope.loggedin = false;
+    }
+    // no user logged in
+    else if (user === null) {
       console.log("Not logged in");
+    }
+    // normal user logged in
+    else if (user.id !== "47f0b82b-59f2-4cae-8bfe-ecb438eb0032") {
+      console.log("You are logged in as normal user");
+    }
+    // admin logged in
+    else {
+      console.log("Logged in as admin");
+      $scope.loggedin = true;
+      console.log("logging the scope.loggedin as admin " + $scope.loggedin);
     }
   });
 
-  $scope.loggedin = true;
-  console.log($scope.loggedin);
+  $scope.loggedin = false;
+  console.log("logging scope.loggedin " + $scope.loggedin);
 
   var authCheck = function () {
-    console.log($scope.loggedin);
+    console.log("logging the scope in authCheck " + $scope.loggedin);
     return auth.user !== null;
   };
   authCheck();
+
+
+
+
+
+
+
+
 
   var getWelcome = function () {
     welcomeData.getWelcomeData().then(function (response) {
