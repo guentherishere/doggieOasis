@@ -2,14 +2,19 @@
   <h3>Edit Products</center>
 </h3>
 <form ng-submit="updateProduct(product)">
+  <label>Product Title</label>
   <input ng-model="product.title" type="text" value="Product Title"></input>
   <br>
+  <label>Description</label>
   <input ng-model="product.description" placeholder="Add description" type="text"></input>
   <br>
+  <label>Cost</label>
   <input ng-model="product.price" placeholder="Add dollar amount" type="text"></input>
   <br>
+  <label>Image path</label>
   <input ng-model="product.image" placeholder="Add image path" required type="text"></input>
   <br>
-  <p></p>
-  <button class="btn waves-effect waves-red" type="submit">Submit</button>
+  <p>
+    <button class="btn waves-effect waves-red" type="submit">Submit</button>
+  </p>
 </form>

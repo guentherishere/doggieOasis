@@ -2,27 +2,28 @@
   <h3>Edit Grooming Hours</center>
 </h3>
 <form ng-submit="updateGrooming(grooming)">
-  Monday:
+  <label>Monday</label>
   <input ng-model="grooming.monday" type="text" value="Edit Monday Hours"></input>
   <br>
-  Tuesday:
+  <label>Tuesday</label>
   <input ng-model="grooming.tuesday" placeholder="Edit Tuesday Hours" type="text"></input>
   <br>
-  Wednesday:
+  <label>Wednesday</label>
   <input ng-model="grooming.wednesday" placeholder="Edit Wednesday Hours" type="text"></input>
   <br>
-  Thursday:
+  <label>Thursday</label>
   <input ng-model="grooming.thursday" placeholder="Edit Thursday Hours" type="text"></input>
   <br>
-  Friday:
+  <label>Friday</label>
   <input ng-model="grooming.friday" placeholder="Edit Friday Hours" type="text"></input>
   <br>
-  Saturday:
+  <label>Saturday</label>
   <input ng-model="grooming.saturday" placeholder="Edit Saturday Hours" type="text"></input>
   <br>
-  Sunday:
+  <label>Sunday</label>
   <input ng-model="grooming.sunday" placeholder="Edit Sunday Hours" type="text"></input>
   <br>
-  <p></p>
-  <button class="btn waves-effect waves-red" type="submit">Submit</button>
+  <p>
+    <button class="btn waves-effect waves-red" type="submit">Submit</button>
+  </p>
 </form>

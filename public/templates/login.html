@@ -14,12 +14,10 @@
   </fieldset>
   <span ng-show="auth.user">
     {{auth.user.name}}
-    <button class="btn waves-effect waves-red" ng-click="auth.$logout()" type="submit">Sign Out</button>
+    <p class="center">
+      <button class="btn waves-effect waves-red" ng-click="auth.$logout()" type="submit">Sign Out</button>
+    </p>
   </span>
 </form>
-<p id="signed_in_as" ng-show="auth.user">Signed in as
+<p class="center" ng-show="auth.user">Signed in as
   {{auth.user.email}}</p>
-
-<div ng-show="loggedin">
-  <h3> Can you see me? </h3>
-</div>

@@ -1,4 +1,4 @@
-app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $location) {
+app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $location, $firebaseAuth) {
 
   var ref = new Firebase('https://doggieoasis.firebaseio.com/');
 
@@ -19,9 +19,11 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
     // admin logged in
     else {
       console.log("Logged in as admin");
-      $scope.loggedin = true;
-      console.log("logging the scope.loggedin as admin " + $scope.loggedin);
+      $scope.$evalAsync(function() {
+         $scope.loggedin = true;
+      });
     }
+    // $scope.$apply();
   });
 
   $scope.loggedin = false;
