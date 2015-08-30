@@ -10,26 +10,22 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
       // user is logged in
       console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
       console.log("Logged in");
-      loggedin = true;
+      console.log($scope.loggedin);
     } else {
       // user is not logged in
+      $scope.loggedin = false;
       console.log("Not logged in");
     }
   });
 
-  var loggedin = false;
+  $scope.loggedin = true;
+  console.log($scope.loggedin);
 
   var authCheck = function () {
+    console.log($scope.loggedin);
     return auth.user !== null;
   };
   authCheck();
-
-
-
-
-
-
-
 
   var getWelcome = function () {
     welcomeData.getWelcomeData().then(function (response) {
