@@ -19,6 +19,8 @@ app.controller('loginCtrl', function ($scope, loginData, $routeParams, $location
       password: $scope.password
     }).then(function (user) {
       Materialize.toast('Logged in successfully', 1000);
+      $scope.loggedin = true;
+      console.log(user);
     }, function (error) {
       if (error = 'INVALID_EMAIL') {
         Materialize.toast('Email invalid or not signed up — trying to sign you up!', 5000);
@@ -31,6 +33,8 @@ app.controller('loginCtrl', function ($scope, loginData, $routeParams, $location
       }
     });
   };
+
+  var loggedin = false;
 
   // var getLogin = function () {
   //   loginData.getLoginData().then(function (response) {
