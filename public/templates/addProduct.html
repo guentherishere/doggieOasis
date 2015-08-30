@@ -1,13 +1,17 @@
-<center>
+<p class="center">
   <h3>Add new product</h3>
-</center>
+</p>
 <form name="productForm" ng-submit="addNewProduct(productForm.$valid)" novalidate>
+  <label>Item name</label>
   <input ng-model="product.title" placeholder="Add item name" required type="text"></input>
   <br>
+  <label>Description</label>
   <input ng-model="product.description" placeholder="Add description" required type="text"></input>
   <br>
+  <label>Price</label>
   <input ng-model="product.price" placeholder="Add amount" required type="text"></input>
   <br>
+  <label>Image Path</label>
   <input ng-model="product.image" placeholder="Add image path" required type="text"></input>
   <br>
   <button class="btn waves-effect waves-red" ng-disabled="productForm.$invalid" ng-submit="addNewProduct()" type="submit">Submit</button>

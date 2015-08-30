@@ -2,10 +2,13 @@
   <h3>Add New Spa Package</h3>
 </p>
 <form name="spaForm" ng-submit="addNewSpa(spaForm.$valid)" novalidate>
+  <label>Package Name</lable>
   <input ng-model="spa.title" placeholder="Add Package Name" required type="text"></input>
   <br>
+  <label>Description</lable>
   <input ng-model="spa.description" placeholder="Add Description" required type="text"></input>
   <br>
+  <label>Cost</lable>
   <input ng-model="spa.price" placeholder="Add Amount (must be number)" required type="text"></input>
   <br>
   <button class="btn waves-effect waves-red" ng-disabled="spaForm.$invalid" ng-submit="addNewSpa()" type="submit">Submit</button>
