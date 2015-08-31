@@ -23,7 +23,9 @@
 <!-- Admin View -->
 <p>
   <center>
-    <a ng-href="/#/addDaycarePackage">Add New Daycare Package</a>
+    <div ng-if="loggedin">
+      <a ng-href="/#/addDaycarePackage">Add New Daycare Package</a>
+    </div>
     <p>
       Please call for scheduling 972-420-4060
     </p>
@@ -58,9 +60,11 @@
 <!-- Admin View -->
           <br>
           <p></p>
-          <a class="btn waves-effect waves-red" ng-href="/#/editDaycarePackages/{{daycare._id}}">Update
-          </a>
-          <button class="btn waves-effect waves-red" ng-click="deleteDaycareRates(daycare)" onclick="Materialize.toast('Item deleted', 2000)">Delete</button>
+          <div ng-if="loggedin">
+            <a class="btn waves-effect waves-red" ng-href="/#/editDaycarePackages/{{daycare._id}}">Update
+            </a>
+            <button class="btn waves-effect waves-red" ng-click="deleteDaycareRates(daycare)" onclick="Materialize.toast('Item deleted', 2000)">Delete</button>
+          </div>
           <p></p>
 <!-- End Admin View -->
         </center>

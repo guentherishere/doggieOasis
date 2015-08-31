@@ -14,5 +14,7 @@
   <br>
   <input ng-model="daycareRates.additional" placeholder="Add Rate (must be number)" required type="text"></input>
   <br>
-  <button class="btn waves-effect waves-red" ng-disabled="daycareForm.$invalid" ng-submit="addNewDaycareRates()" type="submit">Submit</button>
+  <div ng-if="loggedin">
+    <button class="btn waves-effect waves-red" ng-disabled="daycareForm.$invalid" ng-submit="addNewDaycareRates()" type="submit">Submit</button>
+  </div>
 </form>

@@ -14,5 +14,7 @@
   <label>Image Path</label>
   <input ng-model="product.image" placeholder="Add image path" required type="text"></input>
   <br>
-  <button class="btn waves-effect waves-red" ng-disabled="productForm.$invalid" ng-submit="addNewProduct()" type="submit">Submit</button>
+  <div ng-if="loggedin">
+    <button class="btn waves-effect waves-red" ng-disabled="productForm.$invalid" ng-submit="addNewProduct()" type="submit">Submit</button>
+  </div>
 </form>

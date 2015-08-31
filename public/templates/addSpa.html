@@ -11,5 +11,7 @@
   <label>Cost</lable>
   <input ng-model="spa.price" placeholder="Add Amount (must be number)" required type="text"></input>
   <br>
-  <button class="btn waves-effect waves-red" ng-disabled="spaForm.$invalid" ng-submit="addNewSpa()" type="submit">Submit</button>
+  <div ng-if="loggedin">
+    <button class="btn waves-effect waves-red" ng-disabled="spaForm.$invalid" ng-submit="addNewSpa()" type="submit">Submit</button>
+  </div>
 </form>

@@ -6,9 +6,11 @@
   <ngcart-summary></ngcart-summary>
 </cart>
 <!-- Admin View -->
-<center>
-  <a href="/#/addProduct">Add New Product</a>
-</center>
+<div ng-if="loggedin">
+  <center>
+    <a href="/#/addProduct">Add New Product</a>
+  </center>
+</div>
 <p>&nbsp;</p>
 <!-- End Admin View -->
 

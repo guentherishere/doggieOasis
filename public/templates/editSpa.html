@@ -12,6 +12,8 @@
   <input ng-model="spa.price" placeholder="Add dollar amount" type="text"></input>
   <br>
   <p>
-    <button class="btn waves-effect waves-red" type="submit">Submit</button>
+    <div ng-if="loggedin">
+      <button class="btn waves-effect waves-red" type="submit">Submit</button>
+    </div>
   </p>
 </form>

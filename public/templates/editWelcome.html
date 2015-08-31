@@ -6,6 +6,8 @@
       <input ng-model="welcome.welcomeText" type="text" value="Welcome Text"></input>
       <br>
       <p>
-        <button class="btn waves-effect waves-red" type="submit">Submit</button>
+        <div ng-if="loggedin">
+          <button class="btn waves-effect waves-red" type="submit">Submit</button>
+        </div>
       </p>
     </form>

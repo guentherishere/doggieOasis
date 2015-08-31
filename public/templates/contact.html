@@ -43,8 +43,10 @@
 <!-- Admin View -->
             <br>
             <p></p>
-            <a class="btn waves-effect waves-red" ng-href="/#/editAddress/{{address._id}}">Update
-            </a>
+            <div ng-if="loggedin">
+              <a class="btn waves-effect waves-red" ng-href="/#/editAddress/{{address._id}}">Update
+              </a>
+            </div>
             <p></p>
 <!-- End Admin View -->
           </addresses>
@@ -81,8 +83,10 @@
 <!-- Admin View -->
             <br>
             <p></p>
-            <a class="btn waves-effect waves-red" ng-href="/#/editDaycareHours/{{hours._id}}">Update
-            </a>
+            <div ng-if="loggedin">
+              <a class="btn waves-effect waves-red" ng-href="/#/editDaycareHours/{{hours._id}}">Update
+              </a>
+            </div>
             <p></p>
 <!-- End Admin View -->
           </daycareHours>
@@ -119,8 +123,10 @@
 <!-- Admin View -->
             <br>
             <p></p>
-            <a class="btn waves-effect waves-red" ng-href="/#/editGroomingHours/{{hours._id}}">Update
-            </a>
+            <div ng-if="loggedin">
+              <a class="btn waves-effect waves-red" ng-href="/#/editGroomingHours/{{hours._id}}">Update
+              </a>
+            </div>
             <p></p>
 <!-- End Admin View -->
           </groomingHours>

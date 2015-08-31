@@ -24,7 +24,9 @@
   <input ng-model="grooming.sunday" placeholder="Edit Sunday Hours" type="text"></input>
   <br>
   <p>
-    <button class="btn waves-effect waves-red" type="submit">Submit</button>
+    <div ng-if="loggedin">
+      <button class="btn waves-effect waves-red" type="submit">Submit</button>
+    </div>
   </p>
   <br>
 </form>
