@@ -34,8 +34,6 @@ app.controller('loginCtrl', function ($scope, loginData, $routeParams, $location
     });
   };
 
-  var loggedin = false;
-
   // var getLogin = function () {
   //   loginData.getLoginData().then(function (response) {
   //     $scope.logins = response;

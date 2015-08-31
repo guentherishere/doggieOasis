@@ -19,8 +19,8 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
     // admin logged in
     else {
       console.log("Logged in as admin");
-      $scope.$evalAsync(function() {
-         $scope.loggedin = true;
+      $scope.$evalAsync(function () {
+        $scope.loggedin = true;
       });
     }
     // $scope.$apply();
@@ -34,6 +34,7 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
     return auth.user !== null;
   };
   authCheck();
+  // end authentication check
 
   var getWelcome = function () {
     welcomeData.getWelcomeData().then(function (response) {
