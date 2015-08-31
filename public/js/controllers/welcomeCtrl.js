@@ -1,8 +1,8 @@
 app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $location) {
 
+  //authentication check
   var ref = new Firebase('https://doggieoasis.firebaseio.com/');
 
-  //authentication check
   var auth = new FirebaseSimpleLogin(ref, function (error, user) {
     if (error) {
       // an error occurred while attempting login

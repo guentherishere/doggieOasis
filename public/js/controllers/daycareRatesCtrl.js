@@ -1,6 +1,8 @@
 app.controller('daycareRatesCtrl', function ($scope, daycareRatesData, $routeParams, $location) {
 
   //authentication check
+  var ref = new Firebase('https://doggieoasis.firebaseio.com/');
+
   var auth = new FirebaseSimpleLogin(ref, function (error, user) {
     if (error) {
       // an error occurred while attempting login
