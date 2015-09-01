@@ -55,15 +55,14 @@ app.controller('cartCtrl', function ($scope, cartData, productData, $routeParams
   };
   getCartEdit();
 
-  // $scope.addNewCart = function (isValid) {
-  //   if (isValid) {
-  //     cartData.addCartData($scope.cart).then(function (response) {
-  //       console.log("hi");
-  //       getCart();
-  //       $location.path('/store');
-  //     });
-  //   }
-  // };
+  $scope.addNewCart = function (isValid) {
+    if (isValid) {
+      cartData.addCartData($scope.cart).then(function (response) {
+        getCart();
+        $location.path('/cart');
+      });
+    }
+  };
 
   $scope.deleteCart = function (cart) {
     console.log(cart);

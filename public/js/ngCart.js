@@ -1,6 +1,4 @@
 // 'use strict';
-
-
 angular.module('ngCart', ['ngCart.directives'])
 
     .config([function () {
@@ -82,7 +80,7 @@ angular.module('ngCart', ['ngCart.directives'])
         };
 
         this.getTaxRate = function(){
-            return this.$cart.taxRate
+            return this.$cart.taxRate;
         };
 
         this.getTax = function(){
@@ -175,7 +173,7 @@ angular.module('ngCart', ['ngCart.directives'])
                 subTotal: this.getSubTotal(),
                 totalCost: this.totalCost(),
                 items:items
-            }
+            };
         };
 
 
@@ -193,7 +191,7 @@ angular.module('ngCart', ['ngCart.directives'])
 
         this.$save = function () {
             return store.set('cart', JSON.stringify(this.getCart()));
-        }
+        };
 
     }])
 
@@ -293,7 +291,7 @@ angular.module('ngCart', ['ngCart.directives'])
                 quantity: this.getQuantity(),
                 data: this.getData(),
                 total: this.getTotal()
-            }
+            };
         };
 
         return item;
@@ -323,7 +321,7 @@ angular.module('ngCart', ['ngCart.directives'])
                 }
                 return $window.localStorage [key];
             }
-        }
+        };
     }])
 
     .controller('CartController',['$scope', 'ngCart', function($scope, ngCart) {
@@ -332,7 +330,7 @@ angular.module('ngCart', ['ngCart.directives'])
     }])
 
     .value('version', '1.0.0');
-;'use strict';
+'use strict';
 
 
 angular.module('ngCart.directives', ['ngCart.fulfilment'])
@@ -436,7 +434,7 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
                                 error: data
                             });
                         });
-                }
+                };
             }]),
             scope: {
                 service:'@',
@@ -452,7 +450,7 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
             }
         };
     }]);
-;
+
 angular.module('ngCart.fulfilment', [])
     .service('fulfilmentProvider', ['$injector', function($injector){
 
@@ -473,7 +471,7 @@ angular.module('ngCart.fulfilment', [])
             var provider = $injector.get('ngCart.fulfilment.' + this._obj.service);
               return provider.checkout(this._obj.settings);
 
-        }
+        };
 
     }])
 
@@ -491,7 +489,7 @@ angular.module('ngCart.fulfilment', [])
 
             return deferred.promise;
 
-        }
+        };
 
  }])
 
@@ -500,7 +498,7 @@ angular.module('ngCart.fulfilment', [])
         this.checkout = function(settings){
             return $http.post(settings.url,
                 { data: ngCart.toObject(), options: settings.options});
-        }
+        };
  }])
 
 

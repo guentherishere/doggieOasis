@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 //Controllers
 var WelcomeCtrl = require('./controllers/WelcomeCtrl');
 var ProductCtrl = require('./controllers/ProductCtrl');
-// var UserCtrl = require('./controllers/UserCtrl');
+var UserCtrl = require('./controllers/UserCtrl');
 var OrderCtrl = require('./controllers/OrderCtrl');
 var AddressCtrl = require('./controllers/AddressCtrl');
 var DaycareCtrl = require('./controllers/DaycareCtrl');
@@ -65,15 +65,15 @@ app.get('/api/daycareRates', DaycareRatesCtrl.read);
 app.put('/api/daycareRates/:id', DaycareRatesCtrl.update);
 app.delete('/api/daycareRates/:id', DaycareRatesCtrl.delete);
 
-// app.post('/api/users', UserCtrl.create);
-// app.get('/api/users', UserCtrl.read);
-// app.put('/api/users/:id', UserCtrl.update);
-// app.delete('/api/users/:id', UserCtrl.delete);
+app.post('/api/users', UserCtrl.create);
+app.get('/api/users', UserCtrl.read);
+app.put('/api/users/:id', UserCtrl.update);
+app.delete('/api/users/:id', UserCtrl.delete);
 
-app.post('/api/orders', OrderCtrl.create);
-app.get('/api/orders', OrderCtrl.read);
-app.put('/api/orders/:id', OrderCtrl.update);
-app.delete('/api/orders/:id', OrderCtrl.delete);
+// app.post('/api/orders', OrderCtrl.create);
+// app.get('/api/orders', OrderCtrl.read);
+// app.put('/api/orders/:id', OrderCtrl.update);
+// app.delete('/api/orders/:id', OrderCtrl.delete);
 
 //API connection
 var port = 1337;

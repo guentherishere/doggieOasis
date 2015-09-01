@@ -4,8 +4,21 @@ app.controller('loginCtrl', function ($scope, loginData, $routeParams, $location
   $rootScope.auth = $firebaseAuth(ref);
 
   $scope.signUp = function () {
+    // var storeUser = function() {
+    //   console.log("did it get here?");
+    //   console.log(usrEmail);
+    //   loginData.addLoginData(usrEmail);
+    // };
     $rootScope.auth.$createUser($scope.email, $scope.password, function (error, user) {
       if (!error) {
+        shoe = $scope.email;
+        console.log("this is the sho " + shoe);
+        var storeUser = function() {
+          console.log("this is the sho in the function " + shoe);
+          console.log("did it get here?");
+          loginData.addLoginData(shoe);
+        };
+        storeUser(shoe);
         Materialize.toast('Account created and logged in successfully', 5000);
       } else {
         Materialize.toast('Username and/or password invalid', 1000);

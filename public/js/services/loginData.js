@@ -17,9 +17,7 @@ app.service('loginData', function ($http, $q) {
       method: 'POST',
       url: 'http://localhost:1337/api/users',
       data: {
-        username: login.username,
-        email: login.email,
-        password: login.password
+        email: shoe
       }
     }).then(function (response) {
       deferred.resolve(response);

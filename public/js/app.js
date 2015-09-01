@@ -20,7 +20,8 @@ app.config(function ($routeProvider) {
   })
 
   .when('/cart/', {
-    templateUrl: "templates/cart.html"
+    templateUrl: "templates/cart.html",
+    controller: "cartCtrl"
   })
 
   .when('/editSpa/:id', {

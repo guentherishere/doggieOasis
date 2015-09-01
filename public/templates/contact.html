@@ -143,11 +143,13 @@
     </center>
   </p>
   <form name="mail">
-    <label>Name</label>
     <input ng-model="fromName" placeholder="Enter your name" required type="text">
-    <label>Email Address</label>
+    <label>Name</label>
     <input ng-model="fromEmail" placeholder="Enter your e-mail address" required type="text">
-    <label>Message</label>
+    <label>Email Address</label>
     <textarea class="materialize-textarea black-text" id="message" ng-model="message" placeholder="Enter your message" required></textarea>
-    <button class="btn waves-effect waves-red" ng-click="sendEmail(fromEmail, fromName, 'HIDDEN@gmail.com', 'Test', 'Website Contact', message)">send message</button>
+    <label>Message</label>
+    <p>
+      <button class="btn waves-effect waves-red" ng-click="sendEmail(fromEmail, fromName, 'HIDDEN@gmail.com', 'Test', 'Website Contact', message)">send message</button>
+    </p>
   </form>
