@@ -12,6 +12,7 @@ module.exports = {
 
   read: function (req, res) {
     Rating.find(req.query)
+    .populate('type')
       .exec(function (err, result) {
         if (err) return res.status(500).send(err);
         else res.send(result);
