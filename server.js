@@ -15,6 +15,7 @@ var GroomingCtrl = require('./controllers/GroomingCtrl');
 var SpaCtrl = require('./controllers/SpaCtrl');
 var DaycareRatesCtrl = require('./controllers/DaycareRatesCtrl');
 var CartCtrl = require('./controllers/CartCtrl');
+var RatingCtrl = require('./controllers/RatingCtrl');
 
 //Express
 var app = express();
@@ -25,6 +26,7 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 //Endpoints
+//Ops commented out and left in place in case of future need
 // app.post('/api/welcome', WelcomeCtrl.create);
 app.get('/api/welcome', WelcomeCtrl.read);
 app.put('/api/welcome/:id', WelcomeCtrl.update);
@@ -49,6 +51,11 @@ app.post('/api/product', ProductCtrl.create);
 app.get('/api/product', ProductCtrl.read);
 app.put('/api/product/:id', ProductCtrl.update);
 app.delete('/api/product/:id', ProductCtrl.delete);
+
+app.post('/api/rating', RatingCtrl.create);
+app.get('/api/rating', RatingCtrl.read);
+app.put('/api/rating/:id', RatingCtrl.update);
+app.delete('/api/rating/:id', RatingCtrl.delete);
 
 app.post('/api/cart', CartCtrl.create);
 app.get('/api/cart', CartCtrl.read);
