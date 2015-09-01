@@ -1,4 +1,4 @@
-app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $routeParams, $location) {
+app.controller('productCtrl', function ($scope, cartData, productData, ratingData, ngCart, $routeParams, $location) {
 
   //authentication check
   var ref = new Firebase('https://doggieoasis.firebaseio.com/');
@@ -55,6 +55,8 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
   };
   getProductsEdit();
 
+
+
   $scope.addNewProduct = function (isValid) {
     if (isValid) {
       productData.addProductData($scope.product).then(function (response) {
@@ -87,15 +89,37 @@ app.controller('productCtrl', function ($scope, cartData, productData, ngCart, $
     });
   };
 
-  $scope.addNewCart = function (product) {
-    cartData.addCartData($scope.product).then(function (response) {
-      getCart();
+  $scope.addNewRating = function (isValid, rating, product) {
+    if (isValid) {
+      console.log("This is a test");
       console.log(product);
-      $location.path('/store');
-      Materialize.toast('Added successfully', 1000);
-    }, function (err) {
-      Materialize.toast('There was an error', 1000);
+      ratingData.addRatingData(rating, product).then(function (response) {
+        getRatings();
+        $location.path('/store');
+        console.log("are you here?");
+        Materialize.toast('Added successfully', 1000);
+      }, function (err) {
+        Materialize.toast('There was an error', 1000);
+      });
+    }
+  };
+
+  var getRatings = function () {
+    ratingData.getRatingData().then(function (response) {
+      $scope.ratings = response;
     });
   };
+  getRatings();
+
+  // $scope.addNewCart = function (product) {
+  //   cartData.addCartData($scope.product).then(function (response) {
+  //     getCart();
+  //     console.log(product);
+  //     $location.path('/store');
+  //     Materialize.toast('Added successfully', 1000);
+  //   }, function (err) {
+  //     Materialize.toast('There was an error', 1000);
+  //   });
+  // };
 
 });

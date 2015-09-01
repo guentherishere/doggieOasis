@@ -30,6 +30,27 @@
   <br>
   {{product.price | currency}}
   <br>
+  <div>
+    <form name="ratingForm" ng-submit="addNewRating(ratingForm.$valid, rating, product)" novalidate>
+      <div class="input-field col s4">
+        <input class="validate" ng-model="rating.prod" ng-show="false" type="text" value="{{product._id}}">
+        <select class="browser-default" ng-model="rating.number" required>
+          <option disabled selected value="">Rate Product</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+          <option value=5>5</option>
+        </select>
+      </div>
+      <div class="input-field col s4">
+        <button class="btn-floating btn-small waves-effect waves-light red" type="submit" ng-disabled="ratingForm.$invalid" ng-submit="addNewRating(rating)" type="submit">
+          <i class="material-icons">star</i>
+        </button>
+      </div>
+    </div>
+  </form>
+  <br>
 <!-- Admin View -->
   <p></p>
   <div ng-if="loggedin">
