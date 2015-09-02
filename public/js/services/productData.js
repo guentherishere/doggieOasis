@@ -6,6 +6,7 @@ app.service('productData', function ($http, $q) {
       method: 'GET',
       url: 'http://localhost:1337/api/product',
     }).then(function (response) {
+      console.log("This is the object");
       console.log(response);
       deferred.resolve(response.data);
     });

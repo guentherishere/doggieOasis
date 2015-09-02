@@ -9,8 +9,8 @@ module.exports = {
     (function(){
       newRating.save(function (err, savedRating, affected) {
         if (err) return savedRating;
-        var newID = mongoose.Types.ObjectId(savedRating);
-        Product.findByIdAndUpdate(req.body.product, { "rating": { $push : newID} }, function (err, result) {
+        var newID = savedRating._id;
+        Product.findByIdAndUpdate(req.body.product, { $push: { "rating" : newID} }, function (err, result) {
           if (err) res.send(err);
           else {
             res.send(result);

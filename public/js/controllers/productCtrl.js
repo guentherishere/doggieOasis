@@ -39,6 +39,7 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
   var getProducts = function () {
     productData.getProductData().then(function (response) {
       $scope.products = response;
+      
     });
   };
   getProducts();
@@ -95,7 +96,6 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
       console.log(product);
       ratingData.addRatingData(rating, product).then(function (response) {
         console.log("New Rating Instance: ", response);
-        updateProduct();
         getRatings();
         $location.path('/store');
         console.log("are you here?");
