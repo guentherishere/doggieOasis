@@ -1,18 +1,28 @@
 var Rating = require('../models/Rating');
+var Product = require('../models/Product');
+var mongoose = require('mongoose');
 
 module.exports = {
 
   create: function (req, res) {
     var newRating = new Rating(req.body);
-    newRating.save(function (err, result) {
-      if (err) return res.status(500).send(err);
-      else res.send(result);
-    });
+    (function(){
+      newRating.save(function (err, savedRating, affected) {
+        if (err) return savedRating;
+        var newID = mongoose.Types.ObjectId(savedRating);
+        Product.findByIdAndUpdate(req.body.product, { "rating": { $push : newID} }, function (err, result) {
+          if (err) res.send(err);
+          else {
+            res.send(result);
+          }
+        });
+        res.send(res);
+      });
+    })();
   },
 
   read: function (req, res) {
     Rating.find(req.query)
-    .populate('type')
       .exec(function (err, result) {
         if (err) return res.status(500).send(err);
         else res.send(result);

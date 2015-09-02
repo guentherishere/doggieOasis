@@ -94,6 +94,8 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
       console.log("This is a test");
       console.log(product);
       ratingData.addRatingData(rating, product).then(function (response) {
+        console.log("New Rating Instance: ", response);
+        updateProduct();
         getRatings();
         $location.path('/store');
         console.log("are you here?");

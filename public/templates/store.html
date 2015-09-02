@@ -28,6 +28,8 @@
   <br>
   {{product.description}}
   <br>
+    Rating: {{product.rating}}
+  <br>
   {{product.price | currency}}
   <br>
   <div>
@@ -52,6 +54,8 @@
   </form>
   <br>
 <!-- Admin View -->
+  <p></p>
+  <br>
   <p></p>
   <div ng-if="loggedin">
     <a class="btn waves-effect waves-red" ng-href="/#/editProduct/{{product._id}}">Update

@@ -14,8 +14,12 @@ var productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true,
-    min: 0
+    min: 0,
   },
+  rating: [{
+    type: mongoose.Schema.ObjectId,
+    ref: 'rating'
+  }],
   image: {
     type: String,
     required: true
