@@ -17,31 +17,37 @@ app.service('productData', function ($http, $q) {
         }
         avg = Math.ceil(avg / avgCount);
         console.log("this is the avg " + avg);
-        // return avg;
-        response.data[i]['avg'] = avg;
+
+        //Sets intial value to zero
+        if (isNaN(avg) === true) {
+          response.data[i]['avg'] = 0;
+        } else {
+          response.data[i]['avg'] = avg;
+        }
+
       }
       console.log(response.data);
       deferred.resolve(response.data);
     });
     return deferred.promise;
   };
-  //
-  // this.addProductData = function (product) {
-  //   var deferred = $q.defer();
-  //   $http({
-  //     method: 'POST',
-  //     url: 'http://localhost:1337/api/product',
-  //     data: {
-  //       title: product.title,
-  //       description: product.description,
-  //       price: product.price,
-  //       image: product.image
-  //     }
-  //   }).then(function (response) {
-  //     deferred.resolve(response);
-  //   });
-  //   return deferred.promise;
-  // };
+
+  this.addProductData = function (product) {
+    var deferred = $q.defer();
+    $http({
+      method: 'POST',
+      url: 'http://localhost:1337/api/product',
+      data: {
+        title: product.title,
+        description: product.description,
+        price: product.price,
+        image: product.image
+      }
+    }).then(function (response) {
+      deferred.resolve(response);
+    });
+    return deferred.promise;
+  };
 
   this.getRatingData = function () {
     var deferred = $q.defer();

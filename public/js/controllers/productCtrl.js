@@ -94,9 +94,8 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
       console.log(product);
       ratingData.addRatingData(rating, product).then(function (response) {
         console.log("New Rating Instance: ", response);
-        getRatings();
+        getProducts();
         $location.path('/store');
-        console.log("are you here?");
         Materialize.toast('Added successfully', 1000);
       }, function (err) {
         Materialize.toast('There was an error', 1000);
@@ -104,12 +103,12 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
     }
   };
 
-  var getRatings = function () {
-    ratingData.getRatingData().then(function (response) {
-      $scope.ratings = response;
-    });
-  };
-  getRatings();
+  // var getRatings = function () {
+  //   ratingData.getRatingData().then(function (response) {
+  //     $scope.ratings = response;
+  //   });
+  // };
+  // getRatings();
 
   // $scope.addNewCart = function (product) {
   //   cartData.addCartData($scope.product).then(function (response) {
