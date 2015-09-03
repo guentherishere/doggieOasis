@@ -13,7 +13,7 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
       console.log("Not logged in");
     }
     // normal user logged in
-    else if (user.id !== "47f0b82b-59f2-4cae-8bfe-ecb438eb0032") {
+    else if (user.id !== "a7be51f8-ba4a-4ed4-96b1-daceed7ad011") {
       console.log("You are logged in as normal user");
     }
     // admin logged in

@@ -15,7 +15,7 @@ app.service('productData', function ($http, $q) {
           avg = avg + response.data[i].rating[j].rating;
           avgCount++;
         }
-        avg = Math.ceil(avg / avgCount);
+        avg = (avg / avgCount).toFixed(1);
         console.log("this is the avg " + avg);
 
         //Sets intial value to zero
