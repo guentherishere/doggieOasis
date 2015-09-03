@@ -14,7 +14,10 @@ app.service('ratingData', function ($http, $q) {
   };
 
   this.addRatingData = function (rating, product) {
-    var ratingObj = {rating: rating.number, product: product._id};
+    var ratingObj = {
+      rating: rating.number,
+      product: product._id
+    };
     var deferred = $q.defer();
     $http({
       method: 'POST',
