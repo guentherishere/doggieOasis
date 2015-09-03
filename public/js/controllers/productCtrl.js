@@ -23,14 +23,14 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
         $scope.loggedin = true;
       });
     }
-    // $scope.$apply();
+    $scope.$apply();
   });
 
   $scope.loggedin = false;
-  console.log("logging scope.loggedin " + $scope.loggedin);
+  // console.log("logging scope.loggedin " + $scope.loggedin);
 
   var authCheck = function () {
-    console.log("logging the scope in authCheck " + $scope.loggedin);
+    // console.log("logging the scope in authCheck " + $scope.loggedin);
     return auth.user !== null;
   };
   authCheck();
@@ -39,7 +39,7 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
   var getProducts = function () {
     productData.getProductData().then(function (response) {
       $scope.products = response;
-      
+
     });
   };
   getProducts();
@@ -49,14 +49,12 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
       for (var i = 0; i < response.length; i++) {
         if ($routeParams.id === response[i]._id) {
           $scope.product = response[i];
-          console.log($scope.product);
+          // console.log($scope.product);
         }
       }
     });
   };
-  getProductsEdit();
-
-
+  // getProductsEdit();
 
   $scope.addNewProduct = function (isValid) {
     if (isValid) {

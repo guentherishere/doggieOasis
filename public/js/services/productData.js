@@ -6,26 +6,67 @@ app.service('productData', function ($http, $q) {
       method: 'GET',
       url: 'http://localhost:1337/api/product',
     }).then(function (response) {
-      console.log("This is the object");
-      console.log(response);
+
+      console.log('response', response);
+      for (var i = 0; i < response.data.length; i++) {
+        var avgCount = 0;
+        var avg = 0;
+        for (var j = 0; j < response.data[i].rating.length; j++) {
+          avg = avg + response.data[i].rating[j].rating;
+          avgCount++;
+        }
+        avg = Math.ceil(avg / avgCount);
+        console.log("this is the avg " + avg);
+        // return avg;
+        response.data[i]['avg'] = avg;
+      }
+      console.log(response.data);
       deferred.resolve(response.data);
     });
     return deferred.promise;
   };
+  //
+  // this.addProductData = function (product) {
+  //   var deferred = $q.defer();
+  //   $http({
+  //     method: 'POST',
+  //     url: 'http://localhost:1337/api/product',
+  //     data: {
+  //       title: product.title,
+  //       description: product.description,
+  //       price: product.price,
+  //       image: product.image
+  //     }
+  //   }).then(function (response) {
+  //     deferred.resolve(response);
+  //   });
+  //   return deferred.promise;
+  // };
 
-  this.addProductData = function (product) {
+  this.getRatingData = function () {
     var deferred = $q.defer();
     $http({
-      method: 'POST',
+      method: 'GET',
       url: 'http://localhost:1337/api/product',
-      data: {
-        title: product.title,
-        description: product.description,
-        price: product.price,
-        image: product.image
-      }
     }).then(function (response) {
-      deferred.resolve(response);
+
+      console.log('response', response);
+      var ratingArr = [];
+      for (var i = 0; i < response.data.length; i++) {
+        var avgCount = 0;
+        var avg = 0;
+        for (var j = 0; j < response.data[i].rating.length; j++) {
+          avg = avg + response.data[i].rating[j].rating;
+          avgCount++;
+        }
+        avg = avg / avgCount;
+        ratingArr.push(avg);
+        console.log(ratingArr);
+        console.log("this is the avg " + avg);
+        // return avg;
+      }
+
+      deferred.resolve(ratingArr);
     });
     return deferred.promise;
   };

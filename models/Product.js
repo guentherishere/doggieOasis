@@ -17,8 +17,8 @@ var productSchema = new mongoose.Schema({
     min: 0,
   },
   rating: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'rating'
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Rating'
   }],
   image: {
     type: String,

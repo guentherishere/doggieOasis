@@ -12,7 +12,7 @@ module.exports = {
 
   read: function (req, res) {
     Product.find(req.query)
-      .populate('Rating')
+      .populate('rating')
       .exec(function (err, result) {
         if (err) {
           return res.status(500).send(err);

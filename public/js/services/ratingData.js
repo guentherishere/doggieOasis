@@ -6,8 +6,6 @@ app.service('ratingData', function ($http, $q) {
       method: 'GET',
       url: 'http://localhost:1337/api/rating',
     }).then(function (response) {
-      console.log("this is the rating");
-      console.log(response);
       deferred.resolve(response.data);
     });
     return deferred.promise;
