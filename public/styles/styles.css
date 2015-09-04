@@ -13,3 +13,7 @@ cart {
   margin-left: 81%;
   margin-top: 1%;
 }
+
+.footerLinks:hover {
+  text-decoration: underline;
+}
