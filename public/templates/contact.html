@@ -134,17 +134,21 @@
       </div>
     </div>
   </div>
-    <center>
-      <h4>Contact Us</h4>
-    </center>
+  <center>
+    <h4>Contact Us</h4>
+  </center>
   <form name="mail">
-    <input ng-model="fromName" placeholder="Enter your name" required type="text">
     <label>Name</label>
-    <input ng-model="fromEmail" placeholder="Enter your e-mail address" required type="text">
+    <input ng-model="fromName" placeholder="Enter your name" required type="text"></input>
+    <br>
     <label>Email Address</label>
-    <textarea class="materialize-textarea black-text" id="message" ng-model="message" placeholder="Enter your message" required></textarea>
+    <input ng-model="fromEmail" placeholder="Enter your e-mail address" required type="text"></input>
+    <br>
     <label>Message</label>
+    <textarea class="materialize-textarea black-text" id="message" ng-model="message" placeholder="Enter your message" required></textarea>
+    <br>
     <p>
       <button class="btn waves-effect waves-red" ng-click="sendEmail(fromEmail, fromName, 'HIDDEN@gmail.com', 'Test', 'Website Contact', message)">send message</button>
     </p>
+    <p></p>
   </form>
