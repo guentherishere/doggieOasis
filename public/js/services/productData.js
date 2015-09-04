@@ -97,6 +97,7 @@ app.service('productData', function ($http, $q) {
         title: product.title,
         description: product.description,
         price: product.price,
+        rating: product.rating,
         image: product.image
       }
     }).then(function (response) {

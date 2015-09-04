@@ -1,4 +1,4 @@
-app.controller('productCtrl', function ($scope, cartData, productData, ratingData, ngCart, $routeParams, $location) {
+app.controller('productCtrl', function ($scope, productData, ratingData, ngCart, $routeParams, $location) {
 
   //authentication check
   var ref = new Firebase('https://doggieoasis.firebaseio.com/');
@@ -39,7 +39,6 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
   var getProducts = function () {
     productData.getProductData().then(function (response) {
       $scope.products = response;
-
     });
   };
   getProducts();
@@ -49,12 +48,11 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
       for (var i = 0; i < response.length; i++) {
         if ($routeParams.id === response[i]._id) {
           $scope.product = response[i];
-          // console.log($scope.product);
         }
       }
     });
   };
-  // getProductsEdit();
+  getProductsEdit();
 
   $scope.addNewProduct = function (isValid) {
     if (isValid) {
@@ -102,23 +100,5 @@ app.controller('productCtrl', function ($scope, cartData, productData, ratingDat
       });
     }
   };
-
-  // var getRatings = function () {
-  //   ratingData.getRatingData().then(function (response) {
-  //     $scope.ratings = response;
-  //   });
-  // };
-  // getRatings();
-
-  // $scope.addNewCart = function (product) {
-  //   cartData.addCartData($scope.product).then(function (response) {
-  //     getCart();
-  //     console.log(product);
-  //     $location.path('/store');
-  //     Materialize.toast('Added successfully', 1000);
-  //   }, function (err) {
-  //     Materialize.toast('There was an error', 1000);
-  //   });
-  // };
 
 });

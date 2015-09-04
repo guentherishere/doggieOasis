@@ -6,6 +6,7 @@
 
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" ng-show="ngCart.getTotalItems()" target="_top">
     <input name="cmd" type="hidden" value="_xclick"/>
+    <!-- <input type="hidden" name="upload" value="1"> -->
     <input name="business" type="hidden" value="guentherishere-facilitator@gmail.com"/>
     <input name="lc" type="hidden" value="CA"/>
     <input name="item_name" type="hidden" value="{{ settings.paypal.item_name }}"/>
@@ -19,7 +20,7 @@
     <input name="image_url" type="hidden" value="http://localhost:1337/images/logo.png"/>
     <input name="bn" type="hidden" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest"/>
     <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_paynow_cc_144x47.png" type="image"/>
-    <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"/>
+    <!-- <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"/> -->
   </form>
 
 </div>
