@@ -37,6 +37,8 @@ One of my objectives for this project was to spend extra time and careful attent
 <br>
 <a href="https://jquery.com/">jQuery</a>
 <br>
+<a href="http://mandrill.com/?_ga=1.241019971.1788096711.1438006637" target="new">Mandrill (contact form)</a>
+<br>
 <a href="http://materializecss.com/" target="new">MaterializeCSS</a>
 <br>
 <a href="https://www.mongodb.org/" target="new">MongoDB</a>
