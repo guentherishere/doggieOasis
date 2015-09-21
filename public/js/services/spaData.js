@@ -4,7 +4,7 @@ app.service('spaData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:80/api/spa',
+      url: 'http://159.203.93.83:80/api/spa',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -15,7 +15,7 @@ app.service('spaData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
-      url: 'http://localhost:80/api/spa',
+      url: 'http://159.203.93.83:80/api/spa',
       data: {
         title: spa.title,
         description: spa.description,
@@ -31,7 +31,7 @@ app.service('spaData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
-      url: 'http://localhost:80/api/spa/' + spa._id
+      url: 'http://159.203.93.83:80/api/spa/' + spa._id
     }).then(function (response) {
       deferred.resolve(response);
     });
@@ -42,7 +42,7 @@ app.service('spaData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:80/api/spa/' + spa._id,
+      url: 'http://159.203.93.83:80/api/spa/' + spa._id,
       data: {
         title: spa.title,
         description: spa.description,

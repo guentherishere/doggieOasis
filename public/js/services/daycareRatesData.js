@@ -5,7 +5,7 @@ app.service('daycareRatesData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:80/api/daycareRates',
+      url: 'http://159.203.93.83:80/api/daycareRates',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -16,7 +16,7 @@ app.service('daycareRatesData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
-      url: 'http://localhost:80/api/daycareRates',
+      url: 'http://159.203.93.83:80/api/daycareRates',
       data: {
         days: daycareRates.days,
         fullOneDog: daycareRates.fullOneDog,
@@ -35,7 +35,7 @@ app.service('daycareRatesData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
-      url: 'http://localhost:80/api/daycareRates/' + daycareRates._id
+      url: 'http://159.203.93.83:80/api/daycareRates/' + daycareRates._id
     }).then(function (response) {
       deferred.resolve(response);
     });
@@ -46,7 +46,7 @@ app.service('daycareRatesData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:80/api/daycareRates/' + daycareRates._id,
+      url: 'http://159.203.93.83:80/api/daycareRates/' + daycareRates._id,
       data: {
         days: daycareRates.days,
         fullOneDog: daycareRates.fullOneDog,

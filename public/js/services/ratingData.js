@@ -4,7 +4,7 @@ app.service('ratingData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:80/api/rating',
+      url: 'http://159.203.93.83:80/api/rating',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -19,7 +19,7 @@ app.service('ratingData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
-      url: 'http://localhost:80/api/rating',
+      url: 'http://159.203.93.83:80/api/rating',
       data: ratingObj
     }).then(function (response) {
       deferred.resolve(response);

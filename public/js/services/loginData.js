@@ -4,7 +4,7 @@ app.service('loginData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:80/api/users',
+      url: 'http://159.203.93.83:80/api/users',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -15,7 +15,7 @@ app.service('loginData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'POST',
-      url: 'http://localhost:80/api/users',
+      url: 'http://159.203.93.83:80/api/users',
       data: {
         email: shoe
       }
@@ -29,7 +29,7 @@ app.service('loginData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'DELETE',
-      url: 'http://localhost:80/api/users/' + login._id
+      url: 'http://159.203.93.83:80/api/users/' + login._id
     }).then(function (response) {
       deferred.resolve(response);
     });
@@ -40,7 +40,7 @@ app.service('loginData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:80/api/users/' + login._id,
+      url: 'http://159.203.93.83:80/api/users/' + login._id,
       data: {
         title: login.title,
         description: login.description,
