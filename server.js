@@ -49,7 +49,7 @@ app.put('/api/grooming/:id', GroomingCtrl.update);
 app.post('/api/product', ProductCtrl.create);
 app.get('/api/product', ProductCtrl.read);
 app.put('/api/product/:id', ProductCtrl.update);
-app.delete('/api/product/:id', ProductCtrl.delete);
+app.delete(':80/api/product/:id', ProductCtrl.delete);
 
 app.post('/api/rating', RatingCtrl.create);
 app.get('/api/rating', RatingCtrl.read);
