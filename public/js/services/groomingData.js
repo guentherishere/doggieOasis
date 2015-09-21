@@ -4,7 +4,7 @@ app.service('groomingData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:1337/api/grooming',
+      url: 'http://localhost:80/api/grooming',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -15,7 +15,7 @@ app.service('groomingData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'POST',
-  //     url: 'http://localhost:1337/api/grooming',
+  //     url: 'http://localhost:80/api/grooming',
   //     data: {
   //       groomingText: grooming.groomingText
   //     }
@@ -29,7 +29,7 @@ app.service('groomingData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'DELETE',
-  //     url: 'http://localhost:1337/api/grooming/' + grooming._id
+  //     url: 'http://localhost:80/api/grooming/' + grooming._id
   //   }).then(function (response) {
   //     deferred.resolve(response);
   //   });
@@ -40,7 +40,7 @@ app.service('groomingData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:1337/api/grooming/' + grooming._id,
+      url: 'http://localhost:80/api/grooming/' + grooming._id,
       data: {
         monday: grooming.monday,
         tuesday: grooming.tuesday,

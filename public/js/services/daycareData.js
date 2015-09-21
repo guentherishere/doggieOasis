@@ -4,7 +4,7 @@ app.service('daycareData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:1337/api/daycare',
+      url: 'http://localhost:80/api/daycare',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -15,7 +15,7 @@ app.service('daycareData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'POST',
-  //     url: 'http://localhost:1337/api/daycare',
+  //     url: 'http://localhost:80/api/daycare',
   //     data: {
   //       daycareText: daycare.daycareText
   //     }
@@ -29,7 +29,7 @@ app.service('daycareData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'DELETE',
-  //     url: 'http://localhost:1337/api/daycare/' + daycare._id
+  //     url: 'http://localhost:80/api/daycare/' + daycare._id
   //   }).then(function (response) {
   //     deferred.resolve(response);
   //   });
@@ -40,7 +40,7 @@ app.service('daycareData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:1337/api/daycare/' + daycare._id,
+      url: 'http://localhost:80/api/daycare/' + daycare._id,
       data: {
         monday: daycare.monday,
         tuesday: daycare.tuesday,

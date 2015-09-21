@@ -4,7 +4,7 @@ app.service('welcomeData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:1337/api/welcome',
+      url: 'http://localhost:80/api/welcome',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -15,7 +15,7 @@ app.service('welcomeData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'POST',
-  //     url: 'http://localhost:1337/api/welcome',
+  //     url: 'http://localhost:80/api/welcome',
   //     data: {
   //       welcomeText: welcome.welcomeText
   //     }
@@ -29,7 +29,7 @@ app.service('welcomeData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'DELETE',
-  //     url: 'http://localhost:1337/api/welcome/' + welcome._id
+  //     url: 'http://localhost:80/api/welcome/' + welcome._id
   //   }).then(function (response) {
   //     deferred.resolve(response);
   //   });
@@ -40,7 +40,7 @@ app.service('welcomeData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:1337/api/welcome/' + welcome._id,
+      url: 'http://localhost:80/api/welcome/' + welcome._id,
       data: {
         welcomeText: welcome.welcomeText
       }

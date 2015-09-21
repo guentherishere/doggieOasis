@@ -4,7 +4,7 @@ app.service('addressData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: 'http://localhost:1337/api/address',
+      url: 'http://localhost:80/api/address',
     }).then(function (response) {
       deferred.resolve(response.data);
     });
@@ -15,7 +15,7 @@ app.service('addressData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'POST',
-  //     url: 'http://localhost:1337/api/address',
+  //     url: 'http://localhost:80/api/address',
   //     data: {
   //       addressText: address.addressText
   //     }
@@ -29,7 +29,7 @@ app.service('addressData', function ($http, $q) {
   //   var deferred = $q.defer();
   //   $http({
   //     method: 'DELETE',
-  //     url: 'http://localhost:1337/api/address/' + address._id
+  //     url: 'http://localhost:80/api/address/' + address._id
   //   }).then(function (response) {
   //     deferred.resolve(response);
   //   });
@@ -40,7 +40,7 @@ app.service('addressData', function ($http, $q) {
     var deferred = $q.defer();
     $http({
       method: 'PUT',
-      url: 'http://localhost:1337/api/address/' + address._id,
+      url: 'http://localhost:80/api/address/' + address._id,
       data: {
         address: address.address,
         city: address.city,
@@ -60,7 +60,7 @@ app.service('addressData', function ($http, $q) {
       method: "POST",
       url: "https://mandrillapp.com/api/1.0/messages/send.json",
       data: {
-        'key': 'HIDDEN',
+        'key': 'APIKEYHERE',
         'message': {
           'from_email': fromEmail,
           'to': [{
