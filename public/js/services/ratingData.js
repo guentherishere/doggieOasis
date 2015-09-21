@@ -26,5 +26,4 @@ app.service('ratingData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });

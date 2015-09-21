@@ -49,5 +49,4 @@ app.service('welcomeData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });

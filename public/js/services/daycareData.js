@@ -55,5 +55,4 @@ app.service('daycareData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });

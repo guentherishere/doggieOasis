@@ -53,5 +53,4 @@ app.service('spaData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });

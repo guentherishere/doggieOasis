@@ -74,5 +74,4 @@ app.service('addressData', function ($http, $q) {
       }
     });
   };
-
 });

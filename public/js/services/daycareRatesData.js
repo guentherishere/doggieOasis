@@ -1,5 +1,6 @@
 app.service('daycareRatesData', function ($http, $q) {
 
+
   this.getDaycareRatesData = function () {
     var deferred = $q.defer();
     $http({

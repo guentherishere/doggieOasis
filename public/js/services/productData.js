@@ -105,5 +105,4 @@ app.service('productData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });

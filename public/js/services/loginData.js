@@ -51,5 +51,4 @@ app.service('loginData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });

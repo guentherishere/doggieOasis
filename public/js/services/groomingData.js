@@ -55,5 +55,4 @@ app.service('groomingData', function ($http, $q) {
     });
     return deferred.promise;
   };
-
 });
