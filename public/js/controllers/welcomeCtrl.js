@@ -23,7 +23,7 @@ app.controller('welcomeCtrl', function ($scope, welcomeData, $routeParams, $loca
         $scope.loggedin = true;
       });
     }
-    // $scope.$apply();
+    $scope.$apply();
   });
 
   $scope.loggedin = false;
