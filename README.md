@@ -2,7 +2,7 @@
 
 
 <h4>Overview</h4>
-This project was submitted for my personal full-stack project utilizing the <a href="http://mean.io/#!/" target="new">MEAN</a> stack at DevMountain. This website was created for the Doggie Oasis, a pet shop, groomer, and dog daycare facility located in Texas.
+This project is a Full-Stack <a href="http://mean.io/#!/" target="new">(MEAN)</a> application created for the Doggie Oasis, a pet shop, groomer, and dog daycare facility located in Texas.
 
 One of the primary features that I implemented in this project was the ability for the store owner to modify elements on the front end without any programming experience. I made this process very simple for the end-user allowing simple plain-text entry into the form elements. This was achieved using update and post operations to the data that was stored on the back end. As a result, the store, welcome message, daycare packages, spa packages, and contact information are able to be modified by the store owner when logged in to the website.
 
